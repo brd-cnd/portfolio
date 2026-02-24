@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Accueil</title>
+	<meta type="description" content="Portfolio d'une étudiante en BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructures, Réseaux et Systèmes">
+
+	<link rel="stylesheet" href="./styles/styleAccueil.css" type="text/css">
+</head>
+
+<body>
+	<button class = "toggle" onclick="toggleMenu()">
+		<span class = "menuIcon">
+			<img src = "./styles/icons/menu.png">
+		</span>
+	</button>
+	<div class = "fullScreenMenu">
+		<ul>
+			<li class = "primary"><a href = "./index.html">Accueil</a></li>
+			<li class = "primary"><a href = "./parcours.html">Parcours</a></li>
+			<li class = "secondary"><a href = "./parcours.html#partieExperiences">Expériences</a></li>
+			<li class = "secondary"><a href = "./parcours.html#partieFormations">Formations</a></li>
+			<li class = "primary"><a href = "./realisations.html">Réalisations</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP1">Atelier 1</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP2">Atelier 2</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP3">Atelier 3</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP4">Atelier 4</a></li>
+			<li class = "primary"><a href = "./veille_technologique.html">Veille technologique</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieMAP">Mise en place</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieCanaux">Canaux</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieSujet">Sujet de veille</a></li>
+			<li class = "primary"><a href = "./contact.html">Contact</a></li>
+			<li class = "secondary"><a href = "./contact.html#partieTelechargements">Téléchargements</a></li>
+			<li class = "secondary"><a href = "./contact.html#partieContact">Ecrivez-moi</a></li>
+		</ul>
+	</div>
+	<div class = "hero">
+		<div class = "gradPicTitle">
+			<div class="titleGroup">
+				<div class = "titlePage"><h1>Étudiante en BTS SIO</h1></div>
+				<div class = "subTitlePage">Option SISR</div>
+				<div class = "quote"><h2>SERVICES INFORMATIQUES AUX ORGANISATIONS | Solutions d'Infrastructures, Réseaux et Systèmes</h2></div>
+			</div>
+		</div>
+	</div>
+	<div class = "global">
+		<div class = "presentation">
+			<p class = "textPresentation">Bienvenue sur mon portfolio, je m'appelle Sophie :). Après un baccalauréat obtenu en 2023, j'ai poursuivi en L1 maths-info. J'ai été introduite à quelques notions comme l'architecture de l'ordinateur, l'assembleur, ou la programmation en C++, ce qui m'a dépaysée du Python du lycée et remis en question ma vision des langages de programmation. Si des aléas m'ont fait arrêter mes études un court moment, j'ai su rebondir en me rapprochant de l'informatique. En 2024, je m'inscris en BTS SIO à distance auprès du CNED. J'ai rapidement troqué l'option de programmation (SLAM) pour du réseau (SISR) afin d'accéder plus facilement à des parcours en cybersécurité par la suite. La découverte du monde professionnel durant les stages m'a permis d'appréhender concrètement le rôle des systèmes d'information, et m'a encore plus donné envie de poursuivre dans cette voie. J'espère désormais alterner périodes en entreprise et en école pour acquérir de l'expérience dès le début. Si vous souhaitez en savoir plus, choisissez une rubrique via le menu en haut à gauche de l'écran. Bonne visite ! <br><br><span class = "CtrlI">Site codé à la main : grand merci à ceux qui signalent une erreur ou un défaut de mise en page.</span></p>
+		</div>
+	</div>
+	<div id ="afterGlobal"></div>
+	<script>
+		function toggleMenu(){
+			const menu = document.querySelector(".fullScreenMenu");
+			const btn = document.querySelector(".toggle");
+
+			menu.classList.contains("active") ? menu.classList.remove("active") : menu.classList.add("active");
+		}
+	</script>
+</body>

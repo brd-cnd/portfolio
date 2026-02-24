@@ -1,0 +1,285 @@
+/*
+#3f1600 (marron)
+#5db9b8 (turquoise)
+#106C78 (bleu foncé)
+#fff9af (jaune)
+#774510 (café)
+#e8e2b3 (jaune pâle)
+#a3a680 (jaune plus terne)
+*/
+
+:root{
+	--subT:#fff9af;
+	--quote:#a3a680;
+	--greatBlue:#106C78;
+}
+
+@font-face{
+  font-family:"Cormorant Garamond";
+  src:url("./fonts/CormorantGaramond.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"Petit Formal Script";
+  src:url("./fonts/PetitFormalScript.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"29LTMakina";
+  src:url("./fonts/29LTMakina.otf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+/*Marron : #3f1600*/
+/*Bleu : #5db9b8
+Bleu foncé : #106C78
+*/
+/*Teintes de crème :
+#fff9af (jaune)
+#774510 (café)
+#e8e2b3 (jaune pâle)
+#a3a680 (jaune plus terne)
+*/
+
+/*___________________________________________________________________________ Généralités*/
+body{
+	box-sizing:border-box;
+	color:ivory;
+	font-size:1.1rem;
+	font-weight:350;
+	background-color: #3f1600;
+}
+
+button{
+	background-color:transparent;
+	border:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  display:inline;
+}
+
+.skillsItems{
+	padding:2.2rem;
+}
+
+.CtrlG{
+	font-weight:800;
+}
+
+.CtrlI{
+	font-style:italic;
+}
+
+.title{
+	font-size:clamp(3.5rem,5vw,6rem);
+	padding-top:3rem;
+	padding-bottom:1rem;
+	font-variant-caps:small-caps;
+	font-family:"Cormorant Garamond";
+	color:#fff9af;
+}
+
+.subtitle{
+	position:relative;
+	font-size:clamp(2rem,3vw,5rem);
+	color:var(--subT);
+	margin-bottom:0.2em;
+	font-family:"Petit Formal Script";
+}
+
+.global{
+	position:relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+}
+
+/*___________________________________________________________________________ Menu*/
+.fullScreenMenu{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(70, 22, 0, 0.7);
+	backdrop-filter:blur(10px);
+	display:none;
+	align-items:center;
+	justify-content:center;
+	font-family:"Cormorant Garamond";
+	text-transform:uppercase;
+	font-size:2rem;
+	line-height:150%;
+	z-index:1;
+	text-align:center;
+}
+
+.fullScreenMenu ul{
+	list-style:none;
+}
+
+.fullScreenMenu ul li a{
+	text-decoration:none;
+}
+
+.fullScreenMenu ul li a:hover{
+	color:var(--greatBlue);
+}
+
+.primary a{
+	color:ivory;
+}
+
+.secondary{
+	font-size:1.5rem;
+	line-height:120%;
+}
+
+.secondary a{
+	color:var(--quote);
+}
+
+.active{
+	display:flex !important;
+}
+
+.toggle{
+	position:fixed;
+	z-index:99;
+	top:2rem;
+	left:2rem;
+}
+
+/*___________________________________________________________________________ Hero section*/
+.hero{
+	position:relative;
+	height:clamp(400px,100vh,900px);
+	font-size: 2rem;
+	background-image:url("./pictures/fleursBleues.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	background-color:#3d0500;
+	margin-bottom:100px;
+}
+
+.gradPicTitle{
+	width:100%;
+	height:100%;
+	background-image:linear-gradient(90deg, rgba(63,22,0,0.1), 2%, rgba(63,22,0,0.9)), linear-gradient(180deg,rgba(63, 22, 0, 0) 49%, rgba(63, 22, 0, 1) 100%);
+}
+
+.titleGroup{
+	position:absolute;
+	width:clamp(400px,55vw,800px);
+	top:15vh;
+	right:8vw;
+	font-size:clamp(3.75rem,5.5vw,6rem);
+}
+
+.titlePage{
+	position:relative;
+	word-break:break-all;
+	font-size:1.2em;
+	padding-bottom:2vh;
+	text-transform:uppercase;
+	font-family:"Cormorant Garamond";
+}
+
+.subTitlePage{
+	position:relative;
+	font-size:2.75rem;
+	color:var(--subT);
+	margin-bottom:0.2em;
+	font-family:"Petit Formal Script";
+}
+
+.quote{
+	position:relative;
+	font-size:0.35em;
+	color:var(--quote);
+	font-family:"29LTMakina";
+}
+
+/*#e4bb87 -#644320 - #3f1600*/
+/*___________________________________________________________________________ AP */
+.panneau{
+	position:relative;
+	display:block;
+	text-align:center;
+	line-height:250%;
+	margin-bottom:100px;
+}
+
+.explanation{
+	font-size:1.3rem;
+	font-family:"Petit Formal Script";
+}
+
+.thanks{
+	font-size:1.6rem;
+	font-family:"Petit Formal Script";
+	color:#fff9af;
+	margin-top:1rem;
+	margin-bottom:2rem;
+}
+
+.context{
+	margin-bottom:5rem;
+}
+
+.itemDownloadContext{
+	display:flex;
+}
+
+.ctaDownload{
+	padding-right:2rem;
+}
+
+.titleDownloadContext{
+	font-family: "Cormorant Garamond";
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.precision{
+	font-family:"29LTMakina";
+	font-size:1.3rem;
+	color:var(--quote);
+}
+
+.AP{
+	position:relative;
+	width:100%;
+	min-height:20rem;0
+	margin-bottom:3rem;
+
+}
+
+.descriptionAP{
+	font-family: "Cormorant Garamond";
+  font-size: 1.2rem;
+  padding:2rem;
+  text-align:justify;
+}
+
+/*___________________________________________________________________________ Espace avant le pied*/
+#afterGlobal{
+	height:10rem;
+}

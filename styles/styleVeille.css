@@ -1,0 +1,462 @@
+/*
+#3f1600 (marron)
+#5db9b8 (turquoise)
+#106C78 (bleu foncé)
+#fff9af (jaune)
+#774510 (café)
+#e8e2b3 (jaune pâle)
+#a3a680 (jaune plus terne)
+*/
+
+:root{
+	--subT:#fff9af;
+	--quote:#a3a680;
+	--greatBlue:#106C78;
+}
+
+/*-ms-overlow-style:none;
+scrollbar-width:none;*/
+
+::-webkit-scrollbar{
+	none
+}
+
+.greatBlue{
+	color:var(--greatBlue);
+}
+
+@font-face{
+  font-family:"Cormorant Garamond";
+  src:url("./fonts/CormorantGaramond.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"Petit Formal Script";
+  src:url("./fonts/PetitFormalScript.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"29LTMakina";
+  src:url("./fonts/29LTMakina.otf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+/*___________________________________________________________________________ Généralités*/
+body{
+	color:ivory;
+	font-size:1.1rem;
+	background-color: #3f1600;
+}
+
+button{
+	background-color:transparent;
+	border:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  display:inline;
+}
+
+.title{
+	font-size:clamp(3.5rem,5vw,6rem);
+	padding-top:3rem;
+	padding-bottom:1rem;
+	font-variant-caps:small-caps;
+	font-family:"Cormorant Garamond";
+	color:#fff9af;
+}
+
+.skillsItems{
+	padding:2.2rem;
+}
+
+.CtrlG{
+	font-weight:800;
+}
+
+.CtrlI{
+	font-style:italic;
+}
+
+.global{
+	position:relative;
+	display:block;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+	overflow:hidden;
+}
+
+.container{
+	position:relative;
+	scrop-snap-type:y mandatory;
+}
+
+.scrollSection{
+	scoll-snap-align:start;
+}
+
+/*___________________________________________________________________________ Menu*/
+.fullScreenMenu{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(70, 22, 0, 0.7);
+	backdrop-filter:blur(10px);
+	display:none;
+	align-items:center;
+	justify-content:center;
+	font-family:"Cormorant Garamond";
+	text-transform:uppercase;
+	font-size:2rem;
+	line-height:150%;
+	z-index:1;
+	text-align:center;
+}
+
+.fullScreenMenu ul{
+	list-style:none;
+}
+
+.fullScreenMenu ul li a{
+	text-decoration:none;
+}
+
+.fullScreenMenu ul li a:hover{
+	color:var(--greatBlue);
+}
+
+.primary a{
+	color:ivory;
+}
+
+.secondary{
+	font-size:1.5rem;
+	line-height:120%;
+}
+
+.secondary a{
+	color:var(--quote);
+}
+
+.active{
+	display:flex !important;
+}
+
+.toggle{
+	position:fixed;
+	z-index:99;
+	top:2rem;
+	left:2rem;
+}
+
+/*___________________________________________________________________________ Hero section*/
+.picture{
+	width:100vw;
+	height:100vh;
+	z-index:-1;
+	position:fixed;
+	scale:80%;
+}
+
+.hero{
+	position:relative;
+	height:clamp(400px,100vh,900px);
+	font-size: 2rem;
+	margin-bottom:100px;
+}
+
+.titleGroup{
+	position:absolute;
+	width:clamp(400px,60vw,1000px);
+	top:15vh;
+	left:8vw;
+	font-size:clamp(3.75rem,5.5vw,6rem);
+}
+
+.titlePage{
+	position:relative;
+	font-size:1.2em;
+	padding-bottom:2vh;
+	text-transform:uppercase;
+	word-break: break-all;
+	font-family:"Cormorant Garamond";
+}
+
+.subTitlePage{
+	position:relative;
+	font-size:0.5em;
+	color:var(--subT);
+	margin-bottom:0.2em;
+	font-family:"Petit Formal Script";
+}
+
+.quote{
+	position:relative;
+	font-size:0.35em;
+	color:var(--quote);
+	font-family:"29LTMakina";
+}
+
+/*___________________________________________________________________________ Avant-propos*/
+.avantPropos{
+	align-items:center;
+	padding:5rem 0 15rem 0;
+}
+
+.descriptionVeille{
+	position:relative;
+	text-align:center;
+	font-family:"Petit Formal Script";
+	line-height:175%;
+}
+
+/*___________________________________________________________________________ YouTube*/
+/*......................................... Animation*/
+@keyframes roll{
+	from{
+		transform:translateX(0);
+	}
+	to{
+		transform:translate(-200rem);
+	}
+}
+
+/*......................................... */
+.YouTube{
+	position:sticky;
+	top:0;
+	display:flex;
+	width:100%;
+	overflow-x:auto;
+}
+
+.YouTube::-webkit-scrollbar{
+	display:none;
+}
+
+.channelGroup{
+	display:flex;
+	width:200rem;
+	animation: roll 60s infinite linear;
+	border-bottom:1px solid rgba(255,255,255,0.5);
+}
+
+.channel{
+	width:25rem;
+	display:flex;
+	flex-shrink:0;
+	align-items:center;
+	padding:1rem;
+	height:9rem;
+}
+
+.pdpYouTuber{
+	width:20%;
+}
+
+.pdpYouTuber img{
+	width:100%;
+	border-radius:50%;
+}
+
+.textYouTube{
+	width:65%;
+	padding:0 0.5rem;
+}
+
+.youTuber{
+	font-size:1.2rem;
+	font-family:"Petit Formal Script";
+}
+
+.linkYouTuber a{
+	text-decoration:none;
+	font-size:1rem;
+	color:#5db9b8;	
+}
+
+.linkYouTuber{
+	font-family:"Cormorant Garamond";
+	word-break:break-all;
+}
+
+/*___________________________________________________________________________ Veilles*/
+.veilleTech{
+	position:relative;
+	display:inline-block;
+	width:100%;
+}
+
+.infoArticle{
+	position:absolute;
+}
+
+.box{
+	margin-bottom:10rem;
+}
+
+.articles{
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:100vh;
+	overflow:scroll;
+	margin:auto;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-evenly;
+	row-gap:8%;
+	padding:5rem;
+}
+
+.articles::-webkit-scrollbar{
+	display:none;
+}
+
+.item{
+	position:relative;
+	display:flex;
+	width:20rem;
+	height:18rem;
+	transform-box:border-box;
+	padding:1rem;
+	margin-bottom:3rem;
+	justify-content:center;
+	align-items:center;
+	flex-shrink:0;
+	border-radius:20px;
+	background:rgba(255,255,255,0.1);
+}
+
+.infoArticle{
+	display:flex;
+	flex-direction:column;
+	width:90%;
+	height:90%;
+}
+
+.btnVeille{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	display:flex;
+	justify-content:space-between;
+}
+
+.btnVeille button{
+	border:none;
+}
+
+.btnVeille:active{
+	color:var(--greatBlue);
+}
+
+.titleArticle{
+	position:relative;
+	top:20%;
+	text-align:center;
+	font-size:1.2rem;
+	color:#FFFFFF;
+	padding-top:1rem;
+	padding-bottom:0.6rem;
+	text-transform:uppercase;
+	font-variation-caps:small-caps;
+
+}
+
+.sourceArticle{
+	position:absolute;
+	top:1.5rem;
+	color:var(--greatBlue);
+	font-family:"Cormorant Garamond";
+}
+
+.dateArticle{
+	position:absolute;
+	color:#fff9af;
+	font-family:"Petit Formal Script";
+}
+
+.recapArticle{
+	position:absolute;
+	text-align:justify;
+	top:15%;
+	width:85%;
+	height:auto;
+	opacity:0;
+	font-family:"Cormorant Garamond";
+}
+
+.item:hover .recapArticle{
+	transition: all .6s;
+	opacity:1;
+}
+
+.item:hover .titleArticle{
+	transition: all .4s;
+	opacity:0;
+}
+
+.item:hover .sourceArticle{
+	transition: all .6s;
+	opacity:0;
+}
+
+.item:hover .dateArticle{
+	transition: all .6s;
+	opacity:0;
+}
+
+.toComplete{
+	color:red;
+}
+
+.linkArticle{
+	width:3rem;
+	height:3rem;
+	padding:0.5rem;
+	background-color:none;
+	border-radius:50%;
+}
+
+.goToPage{
+	width:3rem;
+	height:3rem;
+	padding:0.5rem;
+	border-radius:50%;
+}
+
+/*___________________________________________________________________________ Espace avant le pied*/
+.afterGlobal{
+	height:10rem;
+}
+
+
+@media (max-width: 768px) {
+	.titlePage .title{
+		word-break:break-all;
+	}
+
+	.descriptionVeille{
+		font-size:0.9rem;
+		line-height:220%;
+	}
+}

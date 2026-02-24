@@ -1,0 +1,220 @@
+:root{
+	--subT:#fff9af;
+	--quote:#a3a680;
+	--greatBlue:#106C78;
+}
+
+.greatBlue{
+	color:var(--greatBlue);
+}
+
+@font-face{
+  font-family:"Cormorant Garamond";
+  src:url("./fonts/CormorantGaramond.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"Petit Formal Script";
+  src:url("./fonts/PetitFormalScript.ttf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+@font-face{
+  font-family:"29LTMakina";
+  src:url("./fonts/29LTMakina.otf");
+  font-weight:normal;
+  font-size:normal;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+/*___________________________________________________________________________ Généralités*/
+body{
+	background-color: #3f1600;
+	color:ivory;
+	font-size:1.1rem;
+	font-weight:350;
+}
+
+button{
+	background-color:transparent;
+	border:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  display:inline;
+}
+
+.global{
+	position:relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+}
+
+.CtrlI{
+	font-style:italic;
+	color:var(--greatBlue);
+	font-family: "Petit Formal Script";
+	font-size:0.9rem;
+}
+
+/*___________________________________________________________________________ Menu*/
+.fullScreenMenu{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(70, 22, 0, 0.7);
+	backdrop-filter:blur(10px);
+	display:none;
+	align-items:center;
+	justify-content:center;
+	font-family:"Cormorant Garamond";
+	text-transform:uppercase;
+	font-size:2rem;
+	line-height:150%;
+	z-index:1;
+	text-align:center;
+}
+
+.fullScreenMenu ul{
+	list-style:none;
+}
+
+.fullScreenMenu ul li a{
+	text-decoration:none;
+}
+
+.fullScreenMenu ul li a:hover{
+	color:var(--greatBlue);
+}
+
+.primary a{
+	color:ivory;
+}
+
+.secondary{
+	font-size:1.5rem;
+	line-height:120%;
+}
+
+.secondary a{
+	color:var(--quote);
+}
+
+.active{
+	display:flex !important;
+}
+
+.toggle{
+	position:fixed;
+	z-index:99;
+	top:2rem;
+	left:2rem;
+}
+/*___________________________________________________________________________ Hero section*/
+.hero{
+	position:relative;
+	height:clamp(400px,100vh,900px);
+	font-size: 2rem;
+	background-image:url("./pictures/intro.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: right;
+}
+
+.titleGroup{
+	position:absolute;
+	width:clamp(450px,50vw,800px);
+	top:12rem;
+	left:8vw;
+	font-size:clamp(3.75rem,5.5vw,6rem);
+}
+
+.gradPicTitle{
+	width:100%;
+	height:100%;
+	background: linear-gradient(22deg,rgba(63, 22, 0, 0.7) 15%, rgba(93, 185, 184, 0.01) 100%);
+}
+
+.titlePage{
+	position:relative;
+	font-size:1.2em;
+	text-transform:uppercase;
+	font-family:"Cormorant Garamond";
+}
+
+.subTitlePage{
+	position:relative;
+	font-size:0.5em;
+	color:var(--subT);
+	margin-bottom:0.2em;
+	font-family:"Petit Formal Script";
+}
+
+.quote{
+	position:relative;
+	font-size:0.35em;
+	color:var(--quote);
+	font-family:"29LTMakina";
+}
+/*___________________________________________________________________________ Présentation*/
+.presentation{
+	display:flex;
+	text-align:justify;
+	text-justify:inter-word;
+	line-height:1.7rem;
+	margin-top:250px;
+	margin-bottom:30px;
+}
+
+.textPresentation{
+	position:relative;
+	width:100%;
+	align-self: center;
+	font-family:"Cormorant Garamond";
+	font-size:1.2rem;
+	line-height:175%;
+}
+
+.textPresentation::first-letter{
+	color:var(--subT);
+	font-family:"Petit Formal Script";
+	font-size:400%;
+	float:left;
+}
+
+/*___________________________________________________________________________ Espace avant le pied*/
+#afterGlobal{
+	height:10rem;
+}
+
+/*___________________________________________________________________________ Media queries*/
+
+/* @media (max-width: 1024px) { } tablette */
+/* @media (max-width: 768px) { } mobile */
+/* @media (max-width: 480px) { } petit mobile */
+
+/*
+#3f1600 rgb(63, 22, 0) (marron)
+#5db9b8 rgb(93, 185, 184) (turquoise)
+#106C78 rgb(16, 108, 120) (bleu foncé)
+#fff9af rgb(255, 249, 175) (jaune)
+#774510 rgb(119, 69, 16) (café)
+#e8e2b3 rgb(232, 226, 179) (jaune pâle)
+#a3a680 rgb(163, 166, 128) (jaune plus terne)
+*/

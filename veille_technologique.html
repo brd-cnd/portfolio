@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Veille technologique</title>
+	<meta type="description" content="Portfolio d'une étudiante en BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructures, Réseaux et Systèmes">
+
+	<link rel="stylesheet" href="./styles/styleVeille.css" type="text/css">
+</head>
+<body>
+	<button class = "toggle" onclick="toggleMenu()">
+		<span class = "menuIcon">
+			<img src = "./styles/icons/menu.png">
+		</span>
+	</button>
+	<div class = "fullScreenMenu">
+		<ul>
+			<li class = "primary"><a href = "./index.html">Accueil</a></li>
+			<li class = "primary"><a href = "./parcours.html">Parcours</a></li>
+			<li class = "secondary"><a href = "./parcours.html#partieExperiences">Expériences</a></li>
+			<li class = "secondary"><a href = "./parcours.html#partieFormations">Formations</a></li>
+			<li class = "primary"><a href = "./realisations.html">Réalisations</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP1">Atelier 1</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP2">Atelier 2</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP3">Atelier 3</a></li>
+			<li class = "secondary"><a href = "./realisations.html#partieAP4">Atelier 4</a></li>
+			<li class = "primary"><a href = "./veille_technologique.html">Veille technologique</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieMAP">Mise en place</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieCanaux">Canaux</a></li>
+			<li class = "secondary"><a href = "./veille_technologique.html#partieSujet">Sujet de veille</a></li>
+			<li class = "primary"><a href = "./contact.html">Contact</a></li>
+			<li class = "secondary"><a href = "./contact.html#partieTelechargements">Téléchargements</a></li>
+			<li class = "secondary"><a href = "./contact.html#partieContact">Ecrivez-moi</a></li>
+		</ul>
+	</div>
+	<div class = "hero">
+		<div class = "picture">
+			<img src = "./styles/pictures/veille.png">
+		</div>
+		<div class = "titleGroup">
+			<div class = "titlePage"><h1>Veille<br>technologique</h1></div>
+			<div class = "subTitlePage">Articles sur l'informatique et sa sécurité</div>
+			<div class = "quote">"La technique est moins importante que les hommes ou que la société, l'important, c'est le projet humain qui est derrière." - Dominique Wolton</div>
+		</div>
+	</div>
+	<div class = "global">
+		<div class="avantPropos">
+			<div class = "title" id="partieMAP">
+				<h2>Mise en place</h2>
+			</div>
+			<div class = "descriptionVeille">
+				<p>L'informatique est un secteur qui évolue très rapidement, ce pourquoi il est important de se tenir à jour. Pour ma part, j'ai regroupé des articles issus d'Internet, mais aussi de la revue MISC à laquelle je me suis abonnée pour l'année 2024-2025. Étant donné que certains sujets abordent des notions fondamentales de l'ordinateur, des explications supplémentaires sont parfois nécessaires pour revoir les bases : je rajoute ici quelques chaînes YouTube ou sites Internet qui vulgarisent quelques aspects. J'ai également utilisé Feedly et Pearltrees pour mener à bien ma veille.<br><br>Ci-dessous, vous trouverez des articles recueillis portant sur divers sujets. Néanmoins, mon attention s'est portée sur les évolutions juridiques concernant l'anonymat sur Internet et les plateformes. Selon moi, la technologie étant un outil, il est important de connaître les lois qui l'encadrent, car si son fonctionnement peut se permettre d'être plus ou moins flou aux yeux du grand public, on ne peut pas en dire autant de son usage.</p>
+			</div>
+		</div>
+	</div>
+	<div class = "global">
+		<div class = "box">
+			<div class = "title" id="partieCanaux">
+				<h2>Canaux d'information</h2>
+			</div>
+			<div class ="container">
+				<div class = "YouTube">
+					<div class = "channelGroup">
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/micode.jpg" alt = "Photo de Michaël de Marliave">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Micode
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Micode" rel="noopener" target="_blank">@Micode</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/v2f.jpg" alt = "Photo de Victor Ostertag">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									V2F
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@V2F" rel="noopener" target="_blank">@V2F</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/overflow.jpg" alt = "Logo de la chaîne Overflow">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Overfl0w
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@overfl-0-w" rel="noopener" target="_blank">@overfl-0-w</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/hafnium.jpg" alt="Logo du YouTubeur Hafnium">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Hafnium - Sécurité informatique
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@HafniumSecuriteInformatique" rel="noopener" target="_blank">@HafniumSecuriteInformatique</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/cookieConnecte.jpg" alt="Photo de Samson Son">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Cookie Connecté
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Cookieconnect%C3%A9" rel="noopener" target="_blank">@Cookieconnecté</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/itConnect.jpg" alt="Logo de la chaîne IT-Connect, de Florian Burnel">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									IT-Connect
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@IT-Connect" rel="noopener" target="_blank">@IT-Connect</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/formip.jpg" alt="Photo de Damien Soulages">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Formip
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Formip" rel="noopener" target="_blank">@Formip</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/underscore.jpg" alt="Logo de la chaîne Underscore, chaîne secondaire de Micode">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Underscore
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Underscore_" rel="noopener" target="_blank">@Underscore_</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div aria-hidden class = "channelGroup">
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/micode.jpg" alt = "Photo de Michaël de Marliave">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Micode
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Micode" rel="noopener" target="_blank">@Micode</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/v2f.jpg" alt = "Photo de Victor Ostertag">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									V2F
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@V2F" rel="noopener" target="_blank">@V2F</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src = "./styles/pictures/overflow.jpg" alt = "Logo de la chaîne Overflow">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Overfl0w
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@overfl-0-w" rel="noopener" target="_blank">@overfl-0-w</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/hafnium.jpg" alt="Logo du YouTubeur Hafnium">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Hafnium - Sécurité informatique
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@HafniumSecuriteInformatique" rel="noopener" target="_blank">@HafniumSecuriteInformatique</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/cookieConnecte.jpg" alt="Photo de Samson Son">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Cookie Connecté
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Cookieconnect%C3%A9" rel="noopener" target="_blank">@Cookieconnecté</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/itConnect.jpg" alt="Logo de la chaîne IT-Connect, de Florian Burnel">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									IT-Connect
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@IT-Connect" rel="noopener" target="_blank">@IT-Connect</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/formip.jpg" alt="Photo de Damien Soulages">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Formip
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Formip" rel="noopener" target="_blank">@Formip</a>
+								</div>
+							</div>
+						</div>
+						<div class = "channel">
+							<div class = "pdpYouTuber">
+								<img src="./styles/pictures/underscore.jpg" alt="Logo de la chaîne Underscore, chaîne secondaire de Micode">
+							</div>
+							<div class = "textYouTube">
+								<div class = "youTuber">
+									Underscore
+								</div>
+								<div class = "linkYouTuber">
+									<a href="https://www.youtube.com/@Underscore_" rel="noopener" target="_blank">@Underscore_</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class = "articles">
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Google Chrome – CVE-2026-2441 : la première faille zero-day de 2026 a été patchée !
+							</div>
+							<div class = "sourceArticle">
+								IT-Connect
+							</div>
+							<div class = "dateArticle">
+								16 février 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.it-connect.fr/google-chrome-cve-2026-2441-la-premiere-faille-zero-day-de-2026-a-ete-patchee/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							La faille 0-day qui a touché Chrome, le navigateur de Google, a été corrigé. L'occasion de découvrir un peu plus en détail l'origine de cette faille, et de se prémunir contre elle.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Windows 10 support a pris fin le 14 octobre 2025
+							</div>
+							<div class = "sourceArticle">
+								Microsoft Support France
+							</div>
+							<div class = "dateArticle">
+								27 mars 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://support.microsoft.com/fr-fr/windows/windows-10-support-a-pris-fin-le-14-octobre-2025-2ca8b313-1946-43d3-b55c-2b95b107f281" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Le support de Windows 10 n'étant plus assuré, Microsoft propose à ses utilisateurs des alternatives qui permettent à ces derniers de continuer d'utiliser leur système d'exploitation.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Windows 11 26H1 attendu dès avril 2026
+							</div>
+							<div class = "sourceArticle">
+								Le Monde Informatique
+							</div>
+							<div class = "dateArticle">
+								12 janvier 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.lemondeinformatique.fr/actualites/lire-windows-11-26h1-attendu-des-avril-2026-98996.html" rel="noopener" target="_blank">
+										<img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)">
+									</a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Microsoft s'adapte aux nouveaux processeurs adaptés à l'IA, en déployant une nouvelle version de son OS pour les PC dotés de ces nouvelles puces.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Windows 11 26H1 : quand certains sites s'emballent... et inventent une future mise à jour majeure.
+							</div>
+							<div class = "sourceArticle">
+								Le Crabe Info
+							</div>
+							<div class = "dateArticle">
+								18 décembre 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://lecrabeinfo.net/decryptages/windows-11-26h1-quand-certains-sites-semballent-et-inventent-une-future-mise-a-jour-majeure/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Le Crabe Info corrige la rumeur d'une mise à jour majeure de Windows 11, insistant sur le caractère spécifique aux architectures ARM et au souci d'adaptation face à la monté croissante de ces dernières de la part du M des GAFAM.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Qualcomm lance son nouveau Snapdragon X pour des Copilot+ PC d'entrée de gamme
+							</div>
+							<div class = "sourceArticle">
+								Informatique News
+							</div>
+							<div class = "dateArticle">
+								8 janvier 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.informatiquenews.fr/qualcomm-lance-un-nouveau-snapdragon-x-pour-des-copilot-pc-dentree-de-gamme-102470" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Snapdragon se destine aux PC d'entrée de gamme, voulant se faire une place parmi AMD et Intel. La puce mise sur son autonomie et son prix pour séduire les petits budgets, tout en s'inscrivant dans son temps, celui de l'intelligence artificielle.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								L'informatique quantique sort du laboratoire : ce que 2026 va vraiment apporter
+							</div>
+							<div class = "sourceArticle">
+								Futura Sciences
+							</div>
+							<div class = "dateArticle">
+								16 janvier 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.futura-sciences.com/tech/actualites/ordinateur-quantique-informatique-quantique-sort-laboratoire-ce-2026-va-reellement-apporter-129974/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Un point sur les attentes de 2026 concernant l'informatique quantique. Toujours en progrès, sont évoqués les qubits logiques et physiques, les premiers domaines qui bénéficieront de cette avancée et les risques en matière de sécurité pour la cryptographie.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Poser une seule question [à l'IA] revient à laisser la lumière allumée « plusieurs heures »
+							</div>
+							<div class = "sourceArticle">
+								Le Huffington Post
+							</div>
+							<div class = "dateArticle">
+								10 février 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.huffingtonpost.fr/environnement/article/intelligence-artificielle-poser-une-seule-question-a-chatgpt-ou-deepseek-revient-a-laisser-la-lumiere-allumee-plusieurs-heures-interview-clx1_245486.html" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Une chercheuse sensibilise à l'impact écologique des IA, aborde la nécessité d'un écoscore selon certains critères, et énonce des bonnes pratiques d'utilisation.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Infographie : quel est le poids écologique du numérique ?
+							</div>
+							<div class = "sourceArticle">
+								L'Alsace
+							</div>
+							<div class = "dateArticle">
+								18 février 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "#" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Cette infographie sensibilise le grand public à son impact numérique. Il encourage à prolonger la vie de nos objets connectés en favorisant une plus longue utilisation, la seconde main et la réparation.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Quel est l'impact de l'IA sur l'éducation ?
+							</div>
+							<div class = "sourceArticle">
+								Inserm
+							</div>
+							<div class = "dateArticle">
+								5 janvier 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.inserm.fr/actualite/quel-est-limpact-de-lia-sur-leducation/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Un neurobiologiste, une chercheuse en IA et un spécialiste en sciences de l'éducation parlent de l'impact de l'IA sur le cerveau, de son duel passivité-créativité, et des profils utilisateurs dégagés parmi les élèves, corrélés à leur catégorie socio-professionnelle.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								IA obligatoire à l'école : et si les élèves en savaient plus que leurs profs sur l'intelligence artificielle ?
+							</div>
+							<div class = "sourceArticle">
+								Futura Sciences
+							</div>
+							<div class = "dateArticle">
+								11 septembre 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-ia-obligatoire-ecole-si-eleves-savaient-plus-leurs-profs-intelligence-artificielle-125215/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Les élèves de 4e et 2nde sont formés à l'IA via PIX. Ce besoin de formation s'inscrit dans le constat d'une utilisation massive de cet outil de la part des étudiants.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Naissance d'un symbole pour la cyberdéfense
+							</div>
+							<div class = "sourceArticle">
+								Aerocontact
+							</div>
+							<div class = "dateArticle">
+								9 janvier 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.aerocontact.com/videos/144428-naissance-dun-symbole-pour-la-cyberdefense" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Le régiment de cyberdéfense se voit attribuer son drapeau.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								La pénurie qui va faire flamber les prix de vos appareils à cause de l’IA 
+							</div>
+							<div class = "sourceArticle">
+								HugoDécrypte
+							</div>
+							<div class = "dateArticle">
+								14 janvier 2026
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.youtube.com/watch?v=9YPf9tNyDTM" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Les fabricants de mémoire RAM destinent davantage leur production aux les centres de données dédiés à l'IA au détriment des composants grand public. Cette baisse de production face à une demande constante de téléphones portables induira très probablement une hausse des prix. 
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								Blocage des sites pornos en France : vie privée, loi SREN, VPN... tout comprendre à l'affaire Aylo
+							</div>
+							<div class = "sourceArticle">
+								Journal du Geek
+							</div>
+							<div class = "dateArticle">
+								5 juin 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.journaldugeek.com/dossier/blocage-des-sites-porno-en-france-vie-privee-loi-sren-vpn-tout-comprendre-a-laffaire-aylo/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							Le durcissement de la législation française freine Aylo. L'entreprise de sites X n'a pas confiance dans les méthodes garantissant l'anonymat que souhaite employer la France et décide de se couper d'elle.
+						</div>
+					</div>
+					<!--********************************************************************************-->
+					<div class = "item">
+						<div class = "infoArticle">
+							<div class ="titleArticle">
+								ChatControl : on fait le point
+							</div>
+							<div class = "sourceArticle">
+								La Quadrature du Net
+							</div>
+							<div class = "dateArticle">
+								3 octobre 2025
+							</div>
+							<div class = "btnVeille">
+								<button class = "linkArticle" onclick="copyLink()">
+									<img src="copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+								</button>
+								<button class = "goToPage">
+									<a href = "https://www.laquadrature.net/2025/10/03/chat-control-on-fait-le-point/" rel="noopener" target="_blank"><img src="open.png" alt="Icône pour visiter le lien" title="Visiter le lien (nouvel onglet)"></a>
+								</button>
+							</div>
+						</div>
+						<div class = "recapArticle">
+							La Quadrature du Net expose le tournant décisif qu'apportera le mois d'octobre de ChatControl. On y trouve un rappel de ce qu'est ce projet, sa légitimité et sa mise en place discutables, ainsi que les acteurs parlementaires ayant du poids dans la direction que prendra l'UE face à cela.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "global">
+		<div>
+			<div class = "title" id="partieSujet">
+				<h2>[Intitulé du sujet de veille]</h2>
+			</div>
+			<div class = "introduction">
+				<p>À compléter</p>
+			</div>
+		</div>
+	</div>
+	<div class ="afterGlobal"></div>
+
+	<script>
+		function toggleMenu(){
+			const menu = document.querySelector(".fullScreenMenu");
+			const btn = document.querySelector(".toggle");
+
+			menu.classList.contains("active") ? menu.classList.remove("active") : menu.classList.add("active");
+		}
+
+		function copyLink(){
+			// récupère la div parente du bouton cliqué
+			const container = event.currentTarget.closest(".btnVeille");
+
+			// récupère le lien dans cette div
+			const link = container.querySelector("a").href;
+
+			// copie dans le presse-papier
+			navigator.clipboard.writeText(link);
+
+			// petit feedback (optionnel)
+			alert("Lien copié !");
+		}
+
+	</script>
+</body>
+</html>
