@@ -1,0 +1,392 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>ParcInfo</title>
+    <meta type="description" content="Atelier professionnel InfraSite">
+
+    <link rel="stylesheet" href="./styles/styleAP.css" type="text/css">
+  </head>
+  <body>
+    <button class = "toggle" onclick="toggleMenu()">
+      <span class = "menuIcon">
+        <img src = "./styles/icons/menu.png">
+      </span>
+    </button>
+    <button class = "backUp">
+      <a href = "#sommaire">
+        <img src = "./styles/icons/arrow.png">
+      </a>
+    </button>
+    <div class = "fullScreenMenu">
+      <ul>
+        <li class = "primary"><a href = "./index.html">Accueil</a></li>
+        <li class = "secondary"><a href = "./index.html#experience">Expérience</a></li>
+        <li class = "secondary"><a href = "./index.html#formation">Formations</a></li>
+        <li class = "primary"><a href = "./realisations.html">Réalisations</a></li>
+        <li class = "secondary"><a href = "./infrasite.html">InfraSite</a></li>
+        <li class = "secondary"><a href = "./evolsyswin.html">EvolSysWin</a></li>
+        <li class = "secondary"><a href = "./parcinfo.html">ParcInfo</a></li>
+        <li class = "primary"><a href = "./veille_technologique.html">Veille technologique</a></li>
+        <li class = "primary"><a href = "./contact.html">Contact</a></li>
+        <li class = "secondary"><a href = "./contact.html#telechargements">Téléchargements</a></li>
+        <li class = "secondary"><a href = "./contact.html#contact">Ecrivez-moi</a></li>
+      </ul>
+    </div>
+    <div class = "hero">
+      <div class = "positionTitle title1"><h1>ParcInfo</h1></div>
+    </div>
+    <section>
+      <div class = "title1">Présentation</div>
+      <div class = "presentation">
+        <div class = "textPresentation">
+          Haec igitur Epicuri non probo, inquam. De cetero vellem equidem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem video minime esse deterritum.
+        </div>
+        <div class = "downloadPresentation">
+          <div class = "download">
+            <div>
+              <a href =  "./files/ETP-Poitiers.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte général des ETP" title = "Téléchargez le PDF du contexte général de l'ETP"></a>
+            </div>
+            <div>
+              Contexte général des ETP
+            </div>
+          </div>
+          <div class = "download">
+            <div>
+              <a href =  "./files/ETP-Chasseneuil.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte spécifique de l'ETP de Chasseneuil" title = "Téléchargez le PDF du contexte de l'ETP de Chasseneuil"></a>
+            </div>  
+            <div>
+              Contexte spécifique de l'ETP de Chasseneuil
+            </div>
+          </div>
+          <div class = "download">
+            <div>
+              <a href =  "./files/ParcInfo-CR.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du compte-rendu de l'atelier InfraSite" title = "Téléchargez le PDF du compte-rendu de l'atelier ParcInfo"></a>
+            </div>
+            <div>Compte-rendu de l'atelier ParcInfo</div>
+          </div>
+          <div class = "download">
+            <div>
+              <a href =  "./files/InfraSite-DT.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier InfraSite" title = "Téléchargez le PDF du compte-rendu de l'atelier InfraSite"></a>
+            </div>
+            <div>Documentation technique de l'atelier ParcInfo</div>
+          </div>
+          <div class = "download">
+            <div>
+              <a href =  "./files/PWSAD.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble des scripts Powershell" title = "Téléchargez l'ensemble des scripts Powershell"></a>
+            </div>  
+            <div>
+              Scripts Powershell
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class = "sectionList">
+    <div class = "title1">Compétences couvertes</div>
+    <ul>
+      <li>Bloc 1 : Support et mise à disposition de services informatiques
+        <ul>
+          <li>Item
+            <ul>
+              <li>Lorem ipsum dolor sit amet
+            </ul>
+          </li>
+          <li>Item
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+          </li>
+          <li>
+            Item
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Bloc 2 : Solutions d'Infrastructures, Réseaux et Systèmes
+        <ul>
+          <li>
+            Item
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+          </li>
+          <li>
+            Item
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <div class = "title1" id = "sommaire">Sommaire</div>
+    <div class = "ensemblePartie">
+      <div class = "partie">
+          <a href="#M0" class = "titrePartie">Prise en main du cahier des charges du projet</a><br>        
+      </div>
+      <div class = "partie">
+        <a href="#M1" class = "titrePartie">Le réseau inventorié</a><br>
+        <ul>
+          <li><a href="#M1-presentation" class = "elementPartie">Présentation de la mission</a></li>
+          <li><a href="#M1-plan" class = "elementPartie">Plan d'approche</a></li>
+          <li><a href="#M1-resultat" class = "elementPartie">Résultats de la mission</a></li>
+        </ul>
+      </div>
+      <div class = "partie">
+        <a href="#M2" class = "titrePartie">La gestion des incidents</a>
+        <ul>
+          <li><a href="#M2-presentation" class = "elementPartie">Présentation de la mission</a></li>
+          <li><a href="#M2-plan" class = "elementPartie">Plan d'approche</a></li>
+          <li><a href="#M2-resultat" class = "elementPartie">Résultats de la mission</a></li>
+        </li>
+      </div>
+      <div class = "partie">
+        <a href="#M3" class = "titrePartie">Déploiement de l'agent GLPI</a>
+        <ul>
+          <li><a href="#M3-presentation" class = "elementPartie">Présentation de la mission</a></li>
+          <li><a href="#M3-plan" class = "elementPartie">Plan d'approche</a></li>
+          <li><a href="#M2-resultat" class = "elementPartie">Résultats de la mission</a></li>
+        </li>
+      </div>
+      <div class = "partie">
+        <a href="#M4" class = "titrePartie">Sécurité et sauvegarde des données</a>
+        <ul>
+          <li><a href="#M4-presentation" class = "elementPartie">Présentation de la mission</a></li>
+          <li><a href="#M4-plan" class = "elementPartie">Plan d'approche</a></li>
+          <li><a href="#M4-resultat" class = "elementPartie">Résultats de la mission</a></li>
+        </li>
+      </div>
+      <div class = "partie">
+        <a href="#M5" class = "titrePartie">Haute-disponibilité</a>
+        <ul>
+          <li><a href="#M5-presentation" class = "elementPartie">Présentation de la mission</a></li>
+          <li><a href="#M5-plan" class = "elementPartie">Plan d'approche</a></li>
+          <li><a href="#M5-resultat" class = "elementPartie">Résultats de la mission</a></li>
+        </li>
+      </div>
+      <div class = "partie">
+        <a href="#bilan" class = "titrePartie">Bilan</a><br>
+        <ul>
+          <li><a href="#etatdeslieux" class = "elementPartie">État des lieux</a></li>
+          <li><a href="#problemes" class = "elementPartie">Problèmes rencontrés</a></li>
+          <li><a href="#ameliorations" class = "elementPartie">Améliorations</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class = "fullScreenSection"  id = "M0">
+    <div class = "title1">Prise en main du cahier des charges du projet</div>
+    <p>
+      Pour permettre une gestion fiable du parc informatique de TiersLieux et un recensement des matériels, le service informatique souhaite installer et déployer un outil de gestion de parc et de gestion d’incident. Vous avez été chargé de mettre en place une solution de gestion de parc et d’incidents. L’installation devra être faite avec la dernière version des logiciels.
+    </p>
+    <div class = "title2" id = "M0-presentation">Descriptif</div>
+    <p>
+      Le cahier des charges précise de contour de votre mission.
+    </p>
+    <div class = "title3">Opérations à réaliser</div>
+    <ul>
+      <li>Installer, configurer et tester les outils nécessaires à l’inventaire régulier et à la gestion des incidents sur le parc informatique de TiersLieux. La solution choisie est basée sur l’application GLPI et son gestionnaire d’inventaire intégré.</li>
+      <li>Réalisation d’une maquette composée de machines clientes, virtuelles ou pas, qui mettra en évidence les fonctionnalités demandées dans le cahier des charges fourni.</li>
+    </ul>
+    <div class = "title3">Productions attendues</div>
+    <ul>
+      <li>Produire la liste des tâches à réaliser, le schéma du réseau et son plan d'adressage ;</li>
+      <li>Produire la procédure d’installation détaillée indiquant d’éventuels problèmes ou contraintes rencontrées</li>
+      <li>Montrer et documenter la mise à jour de l’inventaire lors de l’arrivée d’une nouvelle machine ;</li>
+      <li>Montrer les étapes de la gestion d’un ticket d’incident ;</li>
+      <li>Montrer la réalité de la haute-disponibilité du service GLPI.</li>
+    </ul>
+    <div class = "title3">Cahier des charges</div>
+    <p>
+      Il est souhaitable également que vous fournissiez le plus rapidement possible un tableau de bord de suivi de la mission PARCINFO. Ce tableau de bord sera réalisé avec l’outil de votre choix. Lors de la réception des travaux, vous présenterez la solution que vous avez mise en place ainsi que les différentes productions décrites ci-après.
+    </p>
+  </section>
+  <section class = "fullScreenSection"  id = "M1">
+    <div class = "title1">Le réseau inventorié</div>
+    <div class = "title2" id = "M1-presentation">Présentation de la mission</div>
+    <div class = "download">
+      <div>
+        <a href = "./files/ParcInfo-M1.pdf" download>
+          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 1" title = "Téléchargez la documentation technique de la mission 1">
+        </a>
+      </div>
+      <div class = "title4">
+        Documentation technique de la mission 1
+      </div>
+    </div>
+    <ul>
+      <li>La solution doit être représentative des systèmes présents dans le parc informatique de TiersLieux et AuditME.</li>
+      <li>La solution doit réaliser une remontée la plus complète possible des inventaires sur le serveur (noms des machines, principales caractéristiques matérielles, OS et logiciels installés, adressage Mac et IP, utilisateurs connectés, espace libre sur les disques, etc.).</li>
+      <li>Vous prévoirez dans votre inventaire : un client Windows, un client Linux, un serveur Windows (votre AD) et un serveur Linux (un serveur Web par exemple).</li>
+      <li>Vous produirez un fichier « .csv » contenant ces remontées d’inventaire.</li>
+    </ul>
+    <div class = "title2" id = "M1-plan">Plan d'approche</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "M1-resultat">Résultats de la mission</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "picSet">
+      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
+      <p>Légende</p>
+    </div>
+    <p>
+  </section>
+  <section class = "fullScreenSection"  id = "M2">
+    <div class = "title1">La gestion des incidents</div>
+    <div class = "title2" id = "M2-presentation">Présentation de la mission</div>
+    <div class = "download">
+      <div>
+        <a href = "./files/ParcInfo-M2.pdf" download>
+          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 2" title = "Téléchargez la documentation technique de la mission 2">
+        </a>
+      </div>
+      <div class = "title4">
+        Documentation technique de la mission 2
+      </div>
+    </div>
+    <p>
+      GLPI doit être fonctionnel et paramétré afin de permettre son utilisation par différents profils utilisateurs de AuditME (direction, RH, Comptabilité, Marketing, Administration). On souhaite que la définition des utilisateurs dans GLPI soit synchronisée avec la définition de ces utilisateurs dans l’Active Directory du contrôleur de domaine. Toute modification dans Active Directory (création ou suppression d’utilisateur, changement de groupe, etc...) doit être automatiquement répercutée, quand c’est possible, dans GLPI. L’application GLPI est destinée aux employés, afin qu’ils fassent remonter les problèmes rencontrés sur les machines du parc informatique. Vous produirez un mode opératoire expliquant aux employés comment faire remonter un ticket d’incident avec GLPI. Les utilisateurs de l’entreprise TiersLieux, membres du service Réseau & Systèmes (IT), seront les seuls à résoudre les tickets d’incidents, tous les autres utilisateurs (Tiers Lieux, AuditME) pourront émettre des demandes de résolution de problèmes.
+      <br><br>
+      TiersLieux accueille souvent des stagiaires en informatique, leur mission est d’aider les membres du service Réseau & Systèmes à gérer les demandes d’incidents. Ils devront s’occuper des demandes de niveau 1 et les employés du service IT les demandes de niveau 2. Il est demandé de mettre en place un mécanisme efficace au niveau du domaine et de GLPI pour répondre aux exigences précédentes dès la venue des stagiaires.
+    </p>
+    <div class = "title2" id = "M2-plan">Plan d'approche</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "M2-resultat">Résultats de la mission</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "picSet">
+      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
+      <p>Légende</p>
+    </div>
+  </section>
+  <section class = "fullScreenSection"  id = "M3">
+    <div class = "title1">Déploiement de l'agent GLPI</div>
+    <div class = "title2" id = "M3-presentation">Présentation de la mission</div>
+    <div class = "download">
+      <div>
+        <a href = "./files/ParcInfo-M3.pdf" download>
+          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 3" title = "Téléchargez la documentation technique de la mission 3">
+        </a>
+      </div>
+      <div class = "title4">
+        Documentation technique de la mission 3
+      </div>
+    </div>
+    <p>
+      Tous les systèmes présents dans TiersLieux possèdent l’agent GLPI. Pour faciliter la gestion, il est conseillé de le réaliser à l’aide d’une GPO pour les machines Windows.
+    </p>
+    <div class = "title2" id = "M3-plan">Plan d'approche</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "M3-resultat">Résultats de la mission</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "picSet">
+      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
+      <p>Légende</p>
+    </div>
+  </section>
+  <section class = "fullScreenSection"  id = "M4">
+    <div class = "title1">Sécurité et sauvegarde des données</div>
+    <div class = "title2" id = "M4-presentation">Présentation de la mission</div>
+    <div class = "download">
+      <div>
+        <a href = "./files/ParcInfo-M4.pdf" download>
+          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 4" title = "Téléchargez la documentation technique de la mission 4">
+        </a>
+      </div>
+      <div class = "title4">
+        Documentation technique de la mission 4
+      </div>
+    </div>
+    <p>
+      Pour des raisons de sécurité, l‘application devra garantir la confidentialité des échanges entre GLPI et les utilisateurs.
+      <br><br>
+      Une solution de sauvegarde fiable et automatisée de toutes les données qui concernent la gestion du parc (données GLPI et inventaire) est à prévoir pour garantir la continuité de service de TiersLieux. Cette sauvegarde s’effectuera par le mécanisme et les outils de votre choix. Le chef du service informatique préconise une sauvegarde complète et journalière, mais vous laisse libre de proposer une autre planification. Vous présenterez votre solution ainsi que vos tests de sauvegarde et de restauration.
+    </p>
+    <div class = "title2" id = "M4-plan">Plan d'approche</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "M4-resultat">Résultats de la mission</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "picSet">
+      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
+      <p>Légende</p>
+    </div>
+  </section>
+  <section class = "fullScreenSection"  id = "M5">
+    <div class = "title1">Haute-disponibilité</div>
+    <div class = "title2" id = "M5-presentation">Présentation de la mission</div>
+    <div class = "download">
+      <div>
+        <a href = "./files/ParcInfo-M5.pdf" download>
+          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 5" title = "Téléchargez la documentation technique de la mission 5">
+        </a>
+      </div>
+      <div class = "title4">
+        Documentation technique de la mission 5
+      </div>
+    </div>
+    <p>
+      Afin d’assurer la continuité de service, vous mettrez en place un second serveur GLPI qui pourra prendre le relais en cas de panne du premier à l’aide de la solution HaProxy vue en B2.2 Séquence 7 – Étude et prototypage de la répartition de charge de serveurs web avec HaProxy. La base de données GLPI sera installée sur un 3e serveur sur lequel les deux serveurs GLPI pointeront et pour lequel on ne s’intéresse pas ici à la réplication de la base données.
+    </p>
+    <div class = "title2" id = "M5-plan">Plan d'approche</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "M5-resultat">Résultats de la mission</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "picSet">
+      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
+      <p>Légende</p>
+    </div>
+  </section>
+  <section>
+    <div class = "title1" id = "bilan">Bilan</div>
+    <div class = "title2" id = "etatdeslieux">État des lieux</div>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    <p>
+    </p>
+    <div class = "title2" id = "problemes">Problèmes rencontrés</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+    <div class = "title2" id = "ameliorations">Suggestions d'amélioration</div>
+    <p>
+      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    </p>
+  </section>
+  <div class = "afterGlobal"></div>
+</body>
+<script>
+  function toggleMenu(){
+   const menu = document.querySelector(".fullScreenMenu");
+   const btn = document.querySelector(".toggle");
+
+   menu.classList.contains("active") ? menu.classList.remove("active") : menu.classList.add("active");
+ }
+</script>
+
+</html>
