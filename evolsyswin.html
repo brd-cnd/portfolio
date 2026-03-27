@@ -1,10 +1,11 @@
   <!DOCTYPE html>
   <html>
   <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="utf-8"/>
     <title>EvolSysWin</title>
     <meta type="description" content="Atelier professionnel EvolSysWin">
-
+    
     <link rel="stylesheet" href="./styles/styleAP.css" type="text/css">
   </head>
   <body>
@@ -45,7 +46,7 @@
         <div class = "downloadPresentation">
           <div class = "download">
             <div>
-              <a href =  "./files/ETP-Poitiers.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte général des ETP" title = "Téléchargez le PDF du contexte général de l'ETP"></a>
+              <a href = "./files/ETP-Poitiers.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte général des ETP" title = "Téléchargez le PDF du contexte général de l'ETP"></a>
             </div>
             <div>
               Contexte général des ETP
@@ -53,7 +54,7 @@
           </div>
           <div class = "download">
             <div>
-              <a href =  "./files/ETP-Chasseneuil.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte spécifique de l'ETP de Chasseneuil" title = "Téléchargez le PDF du contexte de l'ETP de Chasseneuil"></a>
+              <a href = "./files/ETP-Chasseneuil.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du contexte spécifique de l'ETP de Chasseneuil" title = "Téléchargez le PDF du contexte de l'ETP de Chasseneuil"></a>
             </div>  
             <div>
               Contexte spécifique de l'ETP de Chasseneuil
@@ -61,13 +62,13 @@
           </div>
           <div class = "download">
             <div>
-              <a href =  "./files/EvolSysWin-CR.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du compte-rendu de l'atelier EvolSysWin" title = "Téléchargez le PDF du compte-rendu de l'atelier EvolSysWin"></a>
+              <a href = "./files/EvolSysWin-CR.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du compte-rendu de l'atelier EvolSysWin" title = "Téléchargez le PDF du compte-rendu de l'atelier EvolSysWin"></a>
             </div>
             <div>Compte-rendu de l'atelier EvolSysWin</div>
           </div>
           <div class = "download">
             <div>
-              <a href =  "./files/EvolSysWin-DT.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier EvolSysWin" title = "Téléchargez le PDF du compte-rendu de l'atelier EvolSysWin"></a>
+              <a href = "./files/EvolSysWin-DT.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier EvolSysWin" title = "Téléchargez le PDF du compte-rendu de l'atelier EvolSysWin"></a>
             </div>
             <div>Documentation technique de l'atelier EvolSysWin</div>
           </div>
@@ -78,6 +79,19 @@
             <div>
               Scripts Powershell
             </div>
+          </div>
+          <div class = "download">
+            <div>
+              <a href = "https://github.com/brd-cnd/PWSAD" rel="noopener" target="_blank"><img src = "./styles/icons/open.png" alt = "Lien vers le dépôt GitHub des scripts Powershell" title = "Aller vers le dépôt GitHub des scripts Powershell (nouvelle fenêtre)"></a>
+            </div>  
+            <div>
+              Lien vers le dépôt GitHub des scripts Powershell
+            </div>
+          </div>
+          <div class = "download">
+            <p class = "italic">
+              N.B : la documentation technique de la mission 3 n'a pas encore été mise à jour.
+            </p>
           </div>
         </div>
       </div>
@@ -195,7 +209,13 @@
   </section>
   <section>
     <div class = "title1" id = "video">Vidéo</div>
-    <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1177476289?h=ec6f38bd9a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Démonstration EvolSysWin"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <div style="padding:75% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/1177476289?h=ec6f38bd9a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Démonstration EvolSysWin"></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <p>
+      Voici une vidéo de présentation des fonctionnalités du réseau de Tierslieux86 exigées par le cahier des charges. D'abord, on prépare une tâche de fond : on se connecte à un compte de la direction de ValorElec, celui de monsieur César : on en profite pour tester une première GPO, celle des mots de passe. Pendant que la session de monsieur César se prépare, nous exécutons les scripts Powershell destinés à intégrer une entreprise et ses utilisateurs à l'architecture système. Cela permet de montrer l'imbrication AGDLP. Une fois l'intégration de l'entreprise faite, la session de monsieur César est prête. On vérifie qu'Adobe Acrobat est opérationnel et que le panneau de configuration n'est pas accessible. En se déconnectant, on teste la stratégie de verrouillage de compte. Une fois le compte bloqué, on répète l'opération avec madame Druet, employé du service recherche et développement pour lesquelles les stratégies de mot de passe et de verrouillage ne sont pas les mêmes. On prête attention à la politique de mot de passe, Adobe Acrobat, panneau de configuration et verrouillage de compte. Pour finir, on crée des partages sur le disque virtuel iSCSI, ce qui permet de prouver que ce dernier est fonctionnel. La création des partages se fait également par un script qui attribue les droits de partage et NTFS automatiquement. Pour ce test, on crée un dossier pour les commerciaux (Liste_propsects) et un dossier pour la R&D (Test_dissolvant). On teste ensuite avec deux comptes de commerciaux, dont l'un des détentaires est responsables. Celui qui n'est pas responsable a le droit de lecture et modification sur Liste_prospects, et aucun accès pour Test_dissolvant. Celui qui est repsonsable a également droit de lecture et modification sur Liste_prospects, mais aussi accès en lecture à Test_dissolvant. Mais le responsable ne doit pas pouvoir écrire dans Test_dissolvant.
+    </p>
   </section>
 
   <section>
