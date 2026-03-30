@@ -187,6 +187,196 @@ section {
 	text-align:center;
 }
 
+.justifyText{
+	text-align:justify;
+}
+
+/*___________________________________________________________________________ YouTube*/
+/*......................................... Animation*/
+@keyframes roll{
+	from{
+		transform:translateX(0);
+	}
+	to{
+		transform:translate(-200rem);
+	}
+}
+
+/*......................................... */
+.YouTube{
+	position:sticky;
+	top:0;
+	display:flex;
+	width:100%;
+	overflow-x:auto;
+}
+
+.YouTube::-webkit-scrollbar{
+	display:none;
+}
+
+.channelGroup{
+	display:flex;
+	width:200rem;
+	animation: roll 60s infinite linear;
+}
+
+.channel{
+	width:25rem;
+	display:flex;
+	flex-shrink:0;
+	align-items:center;
+	padding:1rem;
+	height:9rem;
+}
+
+.pdpYouTuber{
+	width:20%;
+}
+
+.pdpYouTuber img{
+	width:100%;
+	border-radius:50%;
+}
+
+.textYouTube{
+	width:65%;
+	padding:0 0.5rem;
+}
+
+.youTuber{
+	font-size:1.3rem;
+	font-family:"InterTTL";
+}
+
+.linkYouTuber{
+	word-break:break-all;
+}
+
+.linkYouTuber a{
+	font-family:"InterTTL";
+	text-decoration:none;
+	color:#4A4A4A;
+	font-size:0.9rem;
+}
+
+.linkYouTuber a:hover{
+	color:#D9CA3B;
+}
+
+/*___________________________________________________________________________ Veilles*/
+.container{
+	position:relative;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	padding:5rem 0;
+}
+
+.infoArticle{
+	position:relative;
+}
+
+.item{
+	position:relative;
+	display:flex;
+	width:20rem;
+	height:18rem;
+	transform-box:border-box;
+	padding:1rem;
+	margin-bottom:3rem;
+	justify-content:center;
+	align-items:center;
+	flex-shrink:0;
+	border-radius:20px;
+	border:3.5px solid black;
+}
+
+.infoArticle{
+	display:flex;
+	flex-direction:column;
+	width:95%;
+	height:95%;
+}
+
+.btnVeille{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	display:flex;
+	justify-content:space-between;
+}
+
+.btnVeille button{
+	border:none;
+}
+
+.btnVeille:active{
+	color:#D9CA3B;
+}
+
+.metaArticle{
+	text-align:right;
+	font-size:1rem;
+}
+
+.titleArticle{
+	position:relative;
+	padding-top:1rem;
+	padding-bottom:0.6rem;
+	font-family:"InterTTL";
+	font-size:2rem;
+	padding:1rem 0;
+}
+
+.dateArticle{
+	color:#4A4A4A;
+	font-family:"InterTTL";
+}
+
+.sourceArticle{
+	color:#2E2E2E;
+	font-family:"InterTTL";
+}
+
+.recapArticle{
+	position:absolute;
+	text-align:justify;
+	top:10%;
+	width:85%;
+	height:auto;
+	opacity:0;
+}
+
+.item:hover .recapArticle{
+	transition: all .6s;
+	opacity:1;
+}
+
+.item:hover .titleArticle{
+	transition: all .4s;
+	opacity:0;
+}
+
+.toComplete{
+	color:red;
+}
+
+.linkArticle{
+	width:3rem;
+	height:3rem;
+	padding:0.5rem;
+	background-color:none;
+	border-radius:50%;
+}
+
+.goToPage{
+	width:3rem;
+	height:3rem;
+	padding:0.5rem;
+	border-radius:50%;
+}
+
 /*___________________________________________________________________________ Fin*/
 .afterGlobal{
 	height:20vh;
