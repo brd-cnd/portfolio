@@ -41,7 +41,9 @@
       <div class = "title1">Présentation</div>
       <div class = "presentation">
         <div class = "textPresentation">
-          Haec igitur Epicuri non probo, inquam. De cetero vellem equidem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem video minime esse deterritum.
+          L'ETP de Chasseneuil doit pouvoir assurer une gestion de l'inventaire et un suivi des incidents. Il faut proposer une solution à ce besoin, et sécuriser cette solution, notamment en élaborant des plans de sauvegarde et une sécurisation des échanges.
+          <br><br>
+          Afin d'optimiser le travail, il a été jugé préférable de présenter toutes les missions dans un premier temps, puis réorganiser l'ensemble de ces missions afin d'aboutir à un plan d'approche de la solution. En effet, nous avons souhaité partir d'abord des missions de réseau physique, pour ensuite s'occuper des applications. Pour faire le parallèle avec le modèle OSI, on peut dire qu'on remonte de la couche 7 vers la couche 1.
         </div>
         <div class = "downloadPresentation">
           <div class = "download">
@@ -72,14 +74,6 @@
             </div>
             <div>Documentation technique de l'atelier ParcInfo</div>
           </div>
-          <div class = "download">
-            <div>
-              <a href =  "./files/PWSAD.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble des scripts Powershell" title = "Téléchargez l'ensemble des scripts Powershell"></a>
-            </div>  
-            <div>
-              Scripts Powershell
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -89,22 +83,21 @@
     <ul>
       <li>Bloc 1 : Support et mise à disposition de services informatiques
         <ul>
-          <li>Item
+          <li>Gérer le patrimoine informatique
             <ul>
-              <li>Lorem ipsum dolor sit amet
+              <li>Réalisation de l'inventaire</li>
             </ul>
           </li>
-          <li>Item
+          <li>Répondre aux incidents et aux demandes d'assistance et d'évolution
             <ul>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
+              <li>Création de profils avec leurs habilitations à gérer et/ou créer des tickets d'incident</li>
             </ul>
           </li>
           <li>
-            Item
+            Mettre à disposition des utilisateurs un service informatique
             <ul>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
+              <li>Déployer un service : déployement de l'agent GLPI</li>
+              <li>Mise en place du NAT</li>
             </ul>
           </li>
         </ul>
@@ -113,15 +106,29 @@
         Bloc 2 : Solutions d'Infrastructures, Réseaux et Systèmes
         <ul>
           <li>
-            Item
+            Concevoir une solution d'infrastructure réseau
             <ul>
-              <li>Lorem ipsum dolor sit amet</li>
+              <li>Réalisation de la maquette du réseau des serveurs</li>
+              <li>Installation de l'architecture LAMP sur des serveurs Debian Trixie (13.3.0, non graphique)</li>
             </ul>
           </li>
           <li>
-            Item
+            Exploiter, dépanner et superviser une solution d’infrastructure réseau
             <ul>
-              <li>Lorem ipsum dolor sit amet</li>
+              <li>
+                Mise en place d'une solution de haute-disponibilité : HaProxy
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Bloc 3 : Cybersécurité des services informatiques
+        <ul>
+          <li>
+             Assurer la cybersécurité d'une infrastructure réseau, d'un système, d'un service 
+            <ul>
+              <li>Basculement des communications vesr HTTPS grâce aux certificats SSL/TLS</li>
             </ul>
           </li>
         </ul>
@@ -132,51 +139,33 @@
     <div class = "title1" id = "sommaire">Sommaire</div>
     <div class = "ensemblePartie">
       <div class = "partie">
-          <a href="#M0" class = "titrePartie">Prise en main du cahier des charges du projet</a><br>        
-      </div>
-      <div class = "partie">
-        <a href="#M1" class = "titrePartie">Le réseau inventorié</a><br>
+        <a href="#cdc" class = "titrePartie">Énoncé du cahier des charges</a><br>
         <ul>
-          <li><a href="#M1-presentation" class = "elementPartie">Présentation de la mission</a></li>
-          <li><a href="#M1-plan" class = "elementPartie">Plan d'approche</a></li>
-          <li><a href="#M1-resultat" class = "elementPartie">Résultats de la mission</a></li>
+          <li><a href="#M0" class = "elementPartie">Mission 0</a></li>
+          <li><a href="#M1" class = "elementPartie">Mission 1</a></li>
+          <li><a href="#M2" class = "elementPartie">Mission 2</a></li>
+          <li><a href="#M3" class = "elementPartie">Mission 3</a></li>
+          <li><a href="#M4" class = "elementPartie">Mission 4</a></li>
+          <li><a href="#M5" class = "elementPartie">Mission 5</a></li>
         </ul>
       </div>
       <div class = "partie">
-        <a href="#M2" class = "titrePartie">La gestion des incidents</a>
+        <a href="#plan" class = "titrePartie">Réorganisation du cahier des charges</a>
         <ul>
-          <li><a href="#M2-presentation" class = "elementPartie">Présentation de la mission</a></li>
-          <li><a href="#M2-plan" class = "elementPartie">Plan d'approche</a></li>
-          <li><a href="#M2-resultat" class = "elementPartie">Résultats de la mission</a></li>
+          <li><a href="#P1" class = "elementPartie">Installation des machines</a></li>
+          <li><a href="#P2" class = "elementPartie">Paramétrage de la base de données GLPI</a></li>
+          <li><a href="#P3" class = "elementPartie">Configuration de HaProxy</a></li>
+          <li><a href="#P4" class = "elementPartie">Installation de SSL</a></li>
+          <li><a href="#P5" class = "elementPartie">Configuration NAT</a></li>
+          <li><a href="#P7" class = "elementPartie">Déploiement de l'agent GLPI</a></li>
+          <li><a href="#P8" class = "elementPartie">Configuration de GLPI</a></li>
+          <li><a href="#P9" class = "elementPartie">Plan de sauvegarde</a></li>
         </li>
       </div>
       <div class = "partie">
-        <a href="#M3" class = "titrePartie">Déploiement de l'agent GLPI</a>
+        <a href="#bilan" class = "titrePartie">Résultats & bilan</a><br>
         <ul>
-          <li><a href="#M3-presentation" class = "elementPartie">Présentation de la mission</a></li>
-          <li><a href="#M3-plan" class = "elementPartie">Plan d'approche</a></li>
-          <li><a href="#M2-resultat" class = "elementPartie">Résultats de la mission</a></li>
-        </li>
-      </div>
-      <div class = "partie">
-        <a href="#M4" class = "titrePartie">Sécurité et sauvegarde des données</a>
-        <ul>
-          <li><a href="#M4-presentation" class = "elementPartie">Présentation de la mission</a></li>
-          <li><a href="#M4-plan" class = "elementPartie">Plan d'approche</a></li>
-          <li><a href="#M4-resultat" class = "elementPartie">Résultats de la mission</a></li>
-        </li>
-      </div>
-      <div class = "partie">
-        <a href="#M5" class = "titrePartie">Haute-disponibilité</a>
-        <ul>
-          <li><a href="#M5-presentation" class = "elementPartie">Présentation de la mission</a></li>
-          <li><a href="#M5-plan" class = "elementPartie">Plan d'approche</a></li>
-          <li><a href="#M5-resultat" class = "elementPartie">Résultats de la mission</a></li>
-        </li>
-      </div>
-      <div class = "partie">
-        <a href="#bilan" class = "titrePartie">Bilan</a><br>
-        <ul>
+          <li><a href="#resultats" class = "elementPartie">Résultats</a></li>
           <li><a href="#etatdeslieux" class = "elementPartie">État des lieux</a></li>
           <li><a href="#problemes" class = "elementPartie">Problèmes rencontrés</a></li>
           <li><a href="#ameliorations" class = "elementPartie">Améliorations</a></li>
@@ -185,13 +174,10 @@
     </div>
   </section>
   <section class = "fullScreenSection"  id = "M0">
-    <div class = "title1">Prise en main du cahier des charges du projet</div>
+    <div class = "title1">Énoncé du cahier des charges</div>
+    <div class = "title2" id = "M0">Mission 0 : prise en main du cahier des charges</div>
     <p>
       Pour permettre une gestion fiable du parc informatique de TiersLieux et un recensement des matériels, le service informatique souhaite installer et déployer un outil de gestion de parc et de gestion d’incident. Vous avez été chargé de mettre en place une solution de gestion de parc et d’incidents. L’installation devra être faite avec la dernière version des logiciels.
-    </p>
-    <div class = "title2" id = "M0-presentation">Descriptif</div>
-    <p>
-      Le cahier des charges précise de contour de votre mission.
     </p>
     <div class = "title3">Opérations à réaliser</div>
     <ul>
@@ -206,177 +192,161 @@
       <li>Montrer les étapes de la gestion d’un ticket d’incident ;</li>
       <li>Montrer la réalité de la haute-disponibilité du service GLPI.</li>
     </ul>
-    <div class = "title3">Cahier des charges</div>
-    <p>
-      Il est souhaitable également que vous fournissiez le plus rapidement possible un tableau de bord de suivi de la mission PARCINFO. Ce tableau de bord sera réalisé avec l’outil de votre choix. Lors de la réception des travaux, vous présenterez la solution que vous avez mise en place ainsi que les différentes productions décrites ci-après.
-    </p>
-  </section>
-  <section class = "fullScreenSection"  id = "M1">
-    <div class = "title1">Le réseau inventorié</div>
-    <div class = "title2" id = "M1-presentation">Présentation de la mission</div>
-    <div class = "download">
-      <div>
-        <a href = "./files/ParcInfo-M1.pdf" download>
-          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 1" title = "Téléchargez la documentation technique de la mission 1">
-        </a>
-      </div>
-      <div class = "title4">
-        Documentation technique de la mission 1
-      </div>
-    </div>
+    <div class = "title2" id = "M1">Mission 1 : le réseau inventorié</div>
     <ul>
       <li>La solution doit être représentative des systèmes présents dans le parc informatique de TiersLieux et AuditME.</li>
       <li>La solution doit réaliser une remontée la plus complète possible des inventaires sur le serveur (noms des machines, principales caractéristiques matérielles, OS et logiciels installés, adressage Mac et IP, utilisateurs connectés, espace libre sur les disques, etc.).</li>
       <li>Vous prévoirez dans votre inventaire : un client Windows, un client Linux, un serveur Windows (votre AD) et un serveur Linux (un serveur Web par exemple).</li>
       <li>Vous produirez un fichier « .csv » contenant ces remontées d’inventaire.</li>
     </ul>
-    <div class = "title2" id = "M1-plan">Plan d'approche</div>
+    <div class = "title2" id = "M2">Mission 2 : la gestion des incidents</div>
     <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "title2" id = "M1-resultat">Résultats de la mission</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "picSet">
-      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
-      <p>Légende</p>
-    </div>
-    <p>
-  </section>
-  <section class = "fullScreenSection"  id = "M2">
-    <div class = "title1">La gestion des incidents</div>
-    <div class = "title2" id = "M2-presentation">Présentation de la mission</div>
-    <div class = "download">
-      <div>
-        <a href = "./files/ParcInfo-M2.pdf" download>
-          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 2" title = "Téléchargez la documentation technique de la mission 2">
-        </a>
-      </div>
-      <div class = "title4">
-        Documentation technique de la mission 2
-      </div>
-    </div>
-    <p>
-      GLPI doit être fonctionnel et paramétré afin de permettre son utilisation par différents profils utilisateurs de AuditME (direction, RH, Comptabilité, Marketing, Administration). On souhaite que la définition des utilisateurs dans GLPI soit synchronisée avec la définition de ces utilisateurs dans l’Active Directory du contrôleur de domaine. Toute modification dans Active Directory (création ou suppression d’utilisateur, changement de groupe, etc...) doit être automatiquement répercutée, quand c’est possible, dans GLPI. L’application GLPI est destinée aux employés, afin qu’ils fassent remonter les problèmes rencontrés sur les machines du parc informatique. Vous produirez un mode opératoire expliquant aux employés comment faire remonter un ticket d’incident avec GLPI. Les utilisateurs de l’entreprise TiersLieux, membres du service Réseau & Systèmes (IT), seront les seuls à résoudre les tickets d’incidents, tous les autres utilisateurs (Tiers Lieux, AuditME) pourront émettre des demandes de résolution de problèmes.
+      GLPI doit être fonctionnel et paramétré afin de permettre son utilisation par différents profils utilisateurs. On souhaite que la définition des utilisateurs dans GLPI soit synchronisée avec la définition de ces utilisateurs dans l’Active Directory du contrôleur de domaine. Toute modification dans Active Directory (création ou suppression d’utilisateur, changement de groupe, etc...) doit être automatiquement répercutée, quand c’est possible, dans GLPI. L’application GLPI est destinée aux employés, afin qu’ils fassent remonter les problèmes rencontrés sur les machines du parc informatique. Vous produirez un mode opératoire expliquant aux employés comment faire remonter un ticket d’incident avec GLPI. Les utilisateurs de l’entreprise TiersLieux, membres du service Réseau & Systèmes (IT), seront les seuls à résoudre les tickets d’incidents, tous les autres utilisateurs (le personnel de Tierslieux86) pourront émettre des demandes de résolution de problèmes.
       <br><br>
       TiersLieux accueille souvent des stagiaires en informatique, leur mission est d’aider les membres du service Réseau & Systèmes à gérer les demandes d’incidents. Ils devront s’occuper des demandes de niveau 1 et les employés du service IT les demandes de niveau 2. Il est demandé de mettre en place un mécanisme efficace au niveau du domaine et de GLPI pour répondre aux exigences précédentes dès la venue des stagiaires.
     </p>
-    <div class = "title2" id = "M2-plan">Plan d'approche</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "title2" id = "M2-resultat">Résultats de la mission</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "picSet">
-      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
-      <p>Légende</p>
-    </div>
-  </section>
-  <section class = "fullScreenSection"  id = "M3">
-    <div class = "title1">Déploiement de l'agent GLPI</div>
-    <div class = "title2" id = "M3-presentation">Présentation de la mission</div>
-    <div class = "download">
-      <div>
-        <a href = "./files/ParcInfo-M3.pdf" download>
-          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 3" title = "Téléchargez la documentation technique de la mission 3">
-        </a>
-      </div>
-      <div class = "title4">
-        Documentation technique de la mission 3
-      </div>
-    </div>
+    <div class = "title2" id = "M3">Mission 3 : déploiement de l'agent GLPI</div>
     <p>
       Tous les systèmes présents dans TiersLieux possèdent l’agent GLPI. Pour faciliter la gestion, il est conseillé de le réaliser à l’aide d’une GPO pour les machines Windows.
     </p>
-    <div class = "title2" id = "M3-plan">Plan d'approche</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "title2" id = "M3-resultat">Résultats de la mission</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "picSet">
-      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
-      <p>Légende</p>
-    </div>
-  </section>
-  <section class = "fullScreenSection"  id = "M4">
-    <div class = "title1">Sécurité et sauvegarde des données</div>
-    <div class = "title2" id = "M4-presentation">Présentation de la mission</div>
-    <div class = "download">
-      <div>
-        <a href = "./files/ParcInfo-M4.pdf" download>
-          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 4" title = "Téléchargez la documentation technique de la mission 4">
-        </a>
-      </div>
-      <div class = "title4">
-        Documentation technique de la mission 4
-      </div>
-    </div>
+    <div class = "title2" id = "M4">Mission 4 : sécurité et sauvegarde des données</div>
     <p>
       Pour des raisons de sécurité, l‘application devra garantir la confidentialité des échanges entre GLPI et les utilisateurs.
       <br><br>
       Une solution de sauvegarde fiable et automatisée de toutes les données qui concernent la gestion du parc (données GLPI et inventaire) est à prévoir pour garantir la continuité de service de TiersLieux. Cette sauvegarde s’effectuera par le mécanisme et les outils de votre choix. Le chef du service informatique préconise une sauvegarde complète et journalière, mais vous laisse libre de proposer une autre planification. Vous présenterez votre solution ainsi que vos tests de sauvegarde et de restauration.
     </p>
-    <div class = "title2" id = "M4-plan">Plan d'approche</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "title2" id = "M4-resultat">Résultats de la mission</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "picSet">
-      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
-      <p>Légende</p>
-    </div>
-  </section>
-  <section class = "fullScreenSection"  id = "M5">
-    <div class = "title1">Haute-disponibilité</div>
-    <div class = "title2" id = "M5-presentation">Présentation de la mission</div>
-    <div class = "download">
-      <div>
-        <a href = "./files/ParcInfo-M5.pdf" download>
-          <img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de la documentation technique de la mission 5" title = "Téléchargez la documentation technique de la mission 5">
-        </a>
-      </div>
-      <div class = "title4">
-        Documentation technique de la mission 5
-      </div>
-    </div>
+
+    <div class = "title2" id = "M5">Mission 5 : haute-disponibilité</div>
     <p>
       Afin d’assurer la continuité de service, vous mettrez en place un second serveur GLPI qui pourra prendre le relais en cas de panne du premier à l’aide de la solution HaProxy vue en B2.2 Séquence 7 – Étude et prototypage de la répartition de charge de serveurs web avec HaProxy. La base de données GLPI sera installée sur un 3e serveur sur lequel les deux serveurs GLPI pointeront et pour lequel on ne s’intéresse pas ici à la réplication de la base données.
     </p>
-    <div class = "title2" id = "M5-plan">Plan d'approche</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "title2" id = "M5-resultat">Résultats de la mission</div>
-    <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
-    </p>
-    <div class = "picSet">
-      <img src="./styles/pictures/AP3/montagnes.jpg" alt="Capture d'écran de " width=85%>
-      <p>Légende</p>
-    </div>
   </section>
   <section>
-    <div class = "title1" id = "bilan">Bilan</div>
-    <div class = "title2" id = "etatdeslieux">État des lieux</div>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+    <div class = "title1" id = "plan">Réorganisation du cahier des charges</div>
     <p>
+      Si on traduit le cahier des charges, le but est d'installer un logiciel de gestion de parc : on se tourne vers GLPI. Il faut que les serveurs GLPI soient redondants grâce à HaProxy, et que leur base de donnée soit commune. Cette infrastructure ainsi que ses données doivent être sauvegardées de manière judicieuse. En ce qui concerne GLPI lui-même, nous devons 
+    </p>
+    <div class = "title2" id = "P1">Installation des machines</div>
+    <p>
+      D'abord, on s'occupe de créer les nouvelles machines virtuelles nécessaires. Nous aurons besoin de deux serveurs GLPI, d'une machine pour HaProxy et d'une autre pour la base de données de GLPI. Toutes ces quatre machines seront des Debian Trixie (13.3.0) sans interface graphique. Nous allons aussi devoir simuler l'intégration au domaine d'un poste Linux des bureaux : on prend donc cette fois aussi Debian 13, mais en interface graphique.
+    </p>
+    <div class = "title2" id = "P3">Installation de GLPI</div>
+    <p>
+      Pour l'instant, on ne s'occupe que d'un serveur, SRVHDESK. Le plan d'adressage initial souhaite qu'on lui attribue l'adresse 10.2.0.2, mais comme HaProxy va intervenir et qu'on lui donnera cette adresse pour que les échanges vers les serveurs se fassent avec, nous allons changer.
+      <br><br>
+      On prendra l'adresse 10.2.0.3 pour SRVHDESK. On lui implante une architecture LAMP, avec MariaDB comme gestionnaire de base de données. On installe GLPI.
+      <br><br>
+      Attardons-nous sur MariaDB : on aura lancé une installation sécurisée de MariaDB. Puis, on crée un utilisateur local "glpi", ainsi qu'un utilisateur de MariaDB, "glpi" aussi. Dans MariaDB, nous attribuons tous les droits sur la base de données de GLPI pour l'utilisateur "glpi". Ce dernier pourra se connecter à partir de n'importe quel poste. Exportons la base de données de MariaDB et transférons-la sur SRVBDDGLPI.
+      <br><br>
+      Le serveur SRVBDDGLPI aura l'adresse 10.2.0.5 (10.2.0.4 sera donné à SRVHDESK2, clone de SRVHDESK). Sur SRVBDDGLPI, en ligne de commande, on lance l'installation sécurisée de MariaDB. Puis, on importe la base de données de GLPI en attribuant tous les droits dessus à l'utilisateur GLPI. On n'oublie pas, sur ce serveur, d'accorder l'accès distant au service. Sur le serveur SRVHDESK, on modifie le fichier /etc/glpi/config_db.php en remplaçant l'utilisateur habilité par "glpi" et autres informations comme l'IP du serveur et le nom de la base.
+      <br><br>
+      Lorsque tout est téléchargé et installé, on change de mode de réseau et on branche nos serveurs SRVHDESK et SRVBDDGLPI dans le réseau des serveurs. Avant de faire pareil pour SRVHAPROXY, on récupère bien sûr les paquets de HaProxy pour l'installer. Ensuite, on supprime la base de données locale de GLPI sur SRVHDESK, puis on clone ce dernier, ce qui donne SRVHDESK2 et on modifie en conséquence l'adresse IP, les fichiers /etc/hosts et /etc/hostname. D'ailleurs, dans /etc/hosts, on peut renseigner les machines que nous sommes amenées à ping régulièrement.
+      <br><br>
+      On peut passer à la configuration HaProxy, sur le serveur SRVHAPROXY.
+    </p>
+    <div class = "title2" id = "P4">HaProxy et sécurisation des échanges</div>
+    <p>
+       Tout se passe dans le fichier /etc/haproxy/haproxy.cfg, mais avant de faire quoi que ce soit, installons le SSL. Le fait que les échanges soient en SSL ou non influe sur quelques lignes du fichier de configuration.
+       <br><br>
+       Plusieurs choix s'offrent à nous pour installer les certificats SSL, et nous nous tournons vers Active Directory Certificates Services. On installe la fonctionnalité, et en parallèle, on crée une demande de certificats sur notre SRVHAPROXY et on crée une clé privée. Le déroulé de l'opération est décrit dans la fiche technique, mais en ce qui concerne l'échange des fichiers entre les machines, en situation réelle, nous aurions pu prendre une clé USB, par exemple. Ici, nous avons utilisé SSH et le service Python qui permet de monter un mini-serveur, le temps du téléchargenement (python3 -m http.server [N° de port]).
+       <br><br>
+       Le contenu du fichier /etc/haproxy/haproxy.cfg est le suivant :
+      <br><br>
+      <div class = "italic">
+        À venir. Pour l'instant, il s'agit d'une ancienne configuration, dûe à des tests précédents, où le SSL était sur les deux serveurs. Cela fonctionnait, ainsi, mais je n'arrivais pas à faire accepter le certificat de SRVHAPROXY à l'autorité de certification d'AD CS, donc HaProxy est en mode TCP.
+        <br>
+        <br>global
+        <br>log /dev/log  local0
+        <br>log /dev/log  local1 notice
+        <br>chroot /var/lib/haproxy
+        <br>stats socket /run/haproxy/admin.sock mode 660 level admin
+        <br>stats timeout 30s
+        <br>user haproxy
+        <br>group haproxy
+        <br>daemon
+        <br>
+        <br># Default SSL material locations
+        <br>ca-base /etc/ssl/certs
+        <br>crt-base /etc/ssl/private
+        <br>
+        <br># See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.0.3&config=intermediate
+        ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
+        <br>ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
+        <br>ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
+        <br>
+        <br>defaults
+        <br>log global
+        <br>mode  tcp
+        <br>option  tcplog
+        <br>option  dontlognull
+        <br>timeout connect 5000
+        <br>timeout client  50000
+        <br>timeout server  50000
+        <br>errorfile 400 /etc/haproxy/errors/400.http
+        <br>errorfile 403 /etc/haproxy/errors/403.http
+        <br>errorfile 408 /etc/haproxy/errors/408.http
+        <br>errorfile 500 /etc/haproxy/errors/500.http
+        <br>errorfile 502 /etc/haproxy/errors/502.http
+        <br>errorfile 503 /etc/haproxy/errors/503.http
+        <br>errorfile 504 /etc/haproxy/errors/504.http
+        <br>
+        <br># front-end glpi
+        <br>frontend glpi_front
+        <br>bind 10.2.0.2:443
+        <br>default_backend glpi_back
+        <br>
+        <br># back-end glpi
+        <br>backend glpi_back
+        <br>balance roundrobin
+        <br>stick-table type ip size 200k expire 30m
+        <br>stick on src
+        <br>
+        <br>option ssl-hello-chk
+        <br>
+        <br>server SRVHDESK 10.2.0.3:443 check
+        <br>server SRVHDESK2 10.2.0.4:443 check
+      </div>
+    </p>
+    <div class = "title2" id = "P7">Déploiement de l'agent GLPI</div>
+    <p>
+      Pour déployer l'agent GLPI, nous allons faire comme on nous l'a suggéré, c'est-à-dire à travers une GPO. On utilisera la même méthode qu'Adobe Acrobat, c'est-à-dire qu'on prendra un fichier .msi, qu'on le partagera et qu'on l'installera avec la fonctionnalité "Installation de logiciels".
+    </p>
+    <div class = "title2" id = "P8">Configuration de GLPI</div>
+    <p>
+      Il nous est demandé de créer plusieurs profils dans GLPI. Nous devons également lier GLPI à l'Active Directory.
+      <br><br>
+      Pour synchroniser GLPI et l'Active Directory, ce tutoriel nous explique comment faire : https://www.it-connect.fr/tuto-glpi-configurer-authentification-active-directory/.
+      <br><br>
+      En ce qui concerne les profils utilisateurs, nous pouvons déjà modifier l'Active Directory pour que le service informatique ait sa propre unité d'organisation et les groupes qui lui correspondent. En l'occurrence, on pourrait faire un ensemble de groupes (global et domaine local) pour les employés, et un ensemble de groupes pour les stagiaires. Ensuite, nous devons appliquer un profil aux catégories suivantes : employés, utilisateurs et stagiaires. L'interprétation du contexte est la suivante : par "employés", on désigne le personnel de Tierslieux86 ne faisant pas partie du service Réseaux et Systèmes. Les utilisateurs sont les entreprises et adhérents de Tierslieux86, les "clients". Les "stagiaires" sont assez explicites, mais cela suppose qu'il y a une autre catégorie, ceux qui supervisent les stagiaires. Il s'agit du personnel de l'IT. Nous pouvons alors ajouter cette catégorie de personnes. Au final, nous avons quatre catégories : IT, stagiaires, employés et utilisateurs. Les utilisateurs ont le profil Self-Service, afin d'ouvrir des tickets ou réserver un équipement. Le personnel IT a le profil Superviseur.
+    </p>
+    <div class = "title2" id = "P9">Plan de sauvegarde </div>
+    <p>
+      En dernier lieu, établissons un plan de sauvegarde. Déterminons les données à sauvegarder. Nous avons déjà le système en lui-même. En conditions réelles, dépendant de si nous sommes sur une machine réelle ou virtuelle, on peut faire un point de restauration/un snapshot des systèmes lorsque ces derniers viennent d'être installés, sans aucune donnée dessus à part celles qui permettent de démarrer et les logins de base. Ensuite, nous avons la base de données de GLPI.
+      <br><br>
+      Le chef du service informatique opte pour une sauvegarde complète quotidienne. Cela est lourd en termes de temps et de capacités de stockage. Les données de GLPI sont soumises à de nombreux changements, dûs à la création de tickets ou à l'activité même de l'entreprise, puisqu'elle accueille des utilisateurs qui viennent et partent. Il faudrait donc une sauvegarde qui puisse être fréquente, sans trop ralentir le système d'information. Donc une sauvegarde incrémentielle semble le meilleur choix. Nous pourrions ensuite faire une sauvegarde complète le mardi soir, afin qu'en cas de problème, le service informatique puisse réagir le reste de la semaine (du mercredi au vendredi).
+      <br><br>
+      De nombreux logiciels permettent de réaliser des sauvegardes, comme VeamBackup ou Rsync pour Linux.
+    </p>
+  </section>
+  <section>
+    <div class = "title1" id = "bilan">Résultats & bilan</div>
+    <div class = "title2" id = "resultats">Résultats</div>
+    <p>
+      Problèmes de certificats SSL.
+      <br><br>
+      Contenu en attente
+    </p>
+    <div class = "title2" id = "etatdeslieux">État des lieux</div>
+    <p>
+      Contenu en attente
     </p>
     <div class = "title2" id = "problemes">Problèmes rencontrés</div>
     <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+      Contenu en attente
     </p>
     <div class = "title2" id = "ameliorations">Suggestions d'amélioration</div>
     <p>
-      Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.
+      Contenu en attente
     </p>
   </section>
   <div class = "afterGlobal"></div>
