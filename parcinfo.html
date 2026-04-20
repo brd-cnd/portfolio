@@ -236,75 +236,80 @@
       <br><br>
       On prendra l'adresse 10.2.0.3 pour SRVHDESK. On lui implante une architecture LAMP, avec MariaDB comme gestionnaire de base de données. On installe GLPI.
       <br><br>
-      Attardons-nous sur MariaDB : on aura lancé une installation sécurisée de MariaDB. Puis, on crée un utilisateur local "glpi", ainsi qu'un utilisateur de MariaDB, "glpi" aussi. Dans MariaDB, nous attribuons tous les droits sur la base de données de GLPI pour l'utilisateur "glpi". Ce dernier pourra se connecter à partir de n'importe quel poste. Exportons la base de données de MariaDB et transférons-la sur SRVBDDGLPI.
+      Attardons-nous sur MariaDB : on aura lancé une installation sécurisée de MariaDB. Puis, on crée un utilisateur de MariaDB, "glpi". Dans MariaDB, nous attribuons tous les droits sur la base de données de GLPI pour l'utilisateur "glpi". Ce dernier pourra se connecter à partir de n'importe quel poste du réseau. Exportons la base de données de MariaDB et transférons-la sur SRVBDDGLPI.
       <br><br>
       Le serveur SRVBDDGLPI aura l'adresse 10.2.0.5 (10.2.0.4 sera donné à SRVHDESK2, clone de SRVHDESK). Sur SRVBDDGLPI, en ligne de commande, on lance l'installation sécurisée de MariaDB. Puis, on importe la base de données de GLPI en attribuant tous les droits dessus à l'utilisateur GLPI. On n'oublie pas, sur ce serveur, d'accorder l'accès distant au service. Sur le serveur SRVHDESK, on modifie le fichier /etc/glpi/config_db.php en remplaçant l'utilisateur habilité par "glpi" et autres informations comme l'IP du serveur et le nom de la base.
       <br><br>
-      Lorsque tout est téléchargé et installé, on change de mode de réseau et on branche nos serveurs SRVHDESK et SRVBDDGLPI dans le réseau des serveurs. Avant de faire pareil pour SRVHAPROXY, on récupère bien sûr les paquets de HaProxy pour l'installer. Ensuite, on supprime la base de données locale de GLPI sur SRVHDESK, puis on clone ce dernier, ce qui donne SRVHDESK2 et on modifie en conséquence l'adresse IP, les fichiers /etc/hosts et /etc/hostname. D'ailleurs, dans /etc/hosts, on peut renseigner les machines que nous sommes amenées à ping régulièrement.
+      Lorsque tout est téléchargé et installé, on change de mode de réseau et on branche nos serveurs SRVHDESK et SRVBDDGLPI dans le réseau des serveurs. Avant de faire pareil pour SRVHAPROXY, on récupère bien sûr les paquets de HaProxy pour l'installer. Ensuite, on supprime la base de données locale de GLPI sur SRVHDESK, on partage des fichiers de configuration sur le réseau, puis on clone SRVHDESK, ce qui donne SRVHDESK2 et on modifie en conséquence l'adresse IP, les fichiers /etc/hosts et /etc/hostname. D'ailleurs, dans /etc/hosts, on peut renseigner les machines que nous sommes amenées à ping régulièrement.
       <br><br>
       On peut passer à la configuration HaProxy, sur le serveur SRVHAPROXY.
     </p>
     <div class = "title2" id = "P4">HaProxy et sécurisation des échanges</div>
     <p>
-       Tout se passe dans le fichier /etc/haproxy/haproxy.cfg, mais avant de faire quoi que ce soit, installons le SSL. Le fait que les échanges soient en SSL ou non influe sur quelques lignes du fichier de configuration.
+       Tout se passe dans le fichier /etc/haproxy/haproxy.cfg, mais avant de faire quoi que ce soit, installons le SSL. Le fait que les échanges soient en SSL ou non influe sur quelques lignes du fichier de configuration. On utilisera un certificat autosigné.
        <br><br>
        Plusieurs choix s'offrent à nous pour installer les certificats SSL, et nous nous tournons vers Active Directory Certificates Services. On installe la fonctionnalité, et en parallèle, on crée une demande de certificats sur notre SRVHAPROXY et on crée une clé privée. Le déroulé de l'opération est décrit dans la fiche technique, mais en ce qui concerne l'échange des fichiers entre les machines, en situation réelle, nous aurions pu prendre une clé USB, par exemple. Ici, nous avons utilisé SSH et le service Python qui permet de monter un mini-serveur, le temps du téléchargenement (python3 -m http.server [N° de port]).
        <br><br>
        Le contenu du fichier /etc/haproxy/haproxy.cfg est le suivant :
       <br><br>
       <div class = "italic">
-        À venir. Pour l'instant, il s'agit d'une ancienne configuration, dûe à des tests précédents, où le SSL était sur les deux serveurs. Cela fonctionnait, ainsi, mais je n'arrivais pas à faire accepter le certificat de SRVHAPROXY à l'autorité de certification d'AD CS, donc HaProxy est en mode TCP.
         <br>
-        <br>global
-        <br>log /dev/log  local0
-        <br>log /dev/log  local1 notice
-        <br>chroot /var/lib/haproxy
-        <br>stats socket /run/haproxy/admin.sock mode 660 level admin
-        <br>stats timeout 30s
-        <br>user haproxy
-        <br>group haproxy
-        <br>daemon
-        <br>
-        <br># Default SSL material locations
-        <br>ca-base /etc/ssl/certs
-        <br>crt-base /etc/ssl/private
-        <br>
-        <br># See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.0.3&config=intermediate
-        ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
-        <br>ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
-        <br>ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
-        <br>
-        <br>defaults
-        <br>log global
-        <br>mode  tcp
-        <br>option  tcplog
-        <br>option  dontlognull
-        <br>timeout connect 5000
-        <br>timeout client  50000
-        <br>timeout server  50000
-        <br>errorfile 400 /etc/haproxy/errors/400.http
-        <br>errorfile 403 /etc/haproxy/errors/403.http
-        <br>errorfile 408 /etc/haproxy/errors/408.http
-        <br>errorfile 500 /etc/haproxy/errors/500.http
-        <br>errorfile 502 /etc/haproxy/errors/502.http
-        <br>errorfile 503 /etc/haproxy/errors/503.http
-        <br>errorfile 504 /etc/haproxy/errors/504.http
-        <br>
-        <br># front-end glpi
-        <br>frontend glpi_front
-        <br>bind 10.2.0.2:443
-        <br>default_backend glpi_back
-        <br>
-        <br># back-end glpi
-        <br>backend glpi_back
-        <br>balance roundrobin
-        <br>stick-table type ip size 200k expire 30m
-        <br>stick on src
-        <br>
-        <br>option ssl-hello-chk
-        <br>
-        <br>server SRVHDESK 10.2.0.3:443 check
-        <br>server SRVHDESK2 10.2.0.4:443 check
+        global<br>
+          log /dev/log  local0<br>
+          log /dev/log  local1 notice<br>
+          chroot /var/lib/haproxy<br>
+          stats socket /run/haproxy/admin.sock mode 660 level admin<br>
+          stats timeout 30s<br>
+          user haproxy<br>
+          group haproxy<br>
+          daemon<br>
+<br>
+          # Default SSL material locations<br>
+          ca-base /etc/ssl/certs<br>
+          crt-base /etc/ssl/private<br>
+<br>
+          # See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.0.3&config=intermediate
+                ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
+                ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
+                ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets<br>
+<br>
+        defaults<br>
+          log global<br>
+          mode  http<br>
+          option  httplog<br>
+          option  dontlognull<br>
+                timeout connect 5000<br>
+                timeout client  50000<br>
+                timeout server  50000<br>
+          errorfile 400 /etc/haproxy/errors/400.http<br>
+          errorfile 403 /etc/haproxy/errors/403.http<br>
+          errorfile 408 /etc/haproxy/errors/408.http<br>
+          errorfile 500 /etc/haproxy/errors/500.http<br>
+          errorfile 502 /etc/haproxy/errors/502.http<br>
+          errorfile 503 /etc/haproxy/errors/503.http<br>
+          errorfile 504 /etc/haproxy/errors/504.http<br>
+<br>
+        # frontend glpi<br>
+        frontend glpi<br>
+          bind 10.2.0.2:80<br>
+          bind 10.2.0.2:443 ssl crt /etc/ssl/private/haproxy.pem<br>
+          http-request redirect scheme https unless { ssl_fc }<br>
+          default_backend glpi_back<br>
+<br>
+        # backend glpi<br>
+        backend glpi_back<br>
+          balance roundrobin<br>
+          stick-table type ip size 200k expire 30m<br>
+          stick on src<br>
+          server srvhdesk 10.2.0.3:80 check<br>
+          server srvhdesk2 10.2.0.4:80 check<br>
+<br>
+        listen stats<br>
+          bind 10.2.0.2:18152<br>
+          stats enable<br>
+          stats uri /statistics<br>
+          stats refresh 10s<br>
+          stats auth admin:Sio1234*<br>
       </div>
     </p>
     <div class = "title2" id = "P7">Déploiement de l'agent GLPI</div>
@@ -313,11 +318,13 @@
     </p>
     <div class = "title2" id = "P8">Configuration de GLPI</div>
     <p>
-      Il nous est demandé de créer plusieurs profils dans GLPI. Nous devons également lier GLPI à l'Active Directory.
+      Il faut paramétrer GLPI de manière à ce que les permissions de chaque utilisateur permettent la bonne prise en charge des incidents techniques. Cela consiste à créer des groupes et des profils appropriés, puis à synchroniser l'Active Directory avec GLPI, ce qui permet d'établir des règles LDAP sur GLPI et d'automatiser l'affectation à un groupe et profil.
       <br><br>
-      Pour synchroniser GLPI et l'Active Directory, ce tutoriel nous explique comment faire : https://www.it-connect.fr/tuto-glpi-configurer-authentification-active-directory/.
+      En ce qui concerne les groupes, on scinde les membres de l'ETP en deux : les utilisateurs (employés de l'ETP ne faisant pas partie du service informatique et adhérents) et le support informatique (techniciens, stagiaires... : informaticien). Pour les profils, on en crée quatre : Adhérent, Employé, N1 et N2. Adhérent est le clone de Self-Service. Il est destiné aux adhérents de l'ETP et permet de créer des tickets. Employé est aussi un clone de Self-Service, mais dans les faits, il serait idéal de pouvoir fusionner la capacité de création de ticket de Self-Service avec les privilèges de lecture du profil Observer. N1 est créé pour les techniciens de niveau 1, dont font partie les stagiaires. Il s'agit d'une copie du profil technicien. N2 est pour les personnes se chargeant des problèmes de niveau 2 : c'est une réplique du profil Supervisor.
       <br><br>
-      En ce qui concerne les profils utilisateurs, nous pouvons déjà modifier l'Active Directory pour que le service informatique ait sa propre unité d'organisation et les groupes qui lui correspondent. En l'occurrence, on pourrait faire un ensemble de groupes (global et domaine local) pour les employés, et un ensemble de groupes pour les stagiaires. Ensuite, nous devons appliquer un profil aux catégories suivantes : employés, utilisateurs et stagiaires. L'interprétation du contexte est la suivante : par "employés", on désigne le personnel de Tierslieux86 ne faisant pas partie du service Réseaux et Systèmes. Les utilisateurs sont les entreprises et adhérents de Tierslieux86, les "clients". Les "stagiaires" sont assez explicites, mais cela suppose qu'il y a une autre catégorie, ceux qui supervisent les stagiaires. Il s'agit du personnel de l'IT. Nous pouvons alors ajouter cette catégorie de personnes. Au final, nous avons quatre catégories : IT, stagiaires, employés et utilisateurs. Les utilisateurs ont le profil Self-Service, afin d'ouvrir des tickets ou réserver un équipement. Le personnel IT a le profil Superviseur.
+      Dans l'Active Directory, on crée des groupes globaux afin que plus tard, les règles LDAP de GLPI affectent à ces groupes globaux un profil et groupe approprié. On crée un groupe global par groupe existant dans GLPI, donc un pour les utilisateurs, et un pour le support informatique. On crée ensuite un groupe global par profil existant. Pour synchroniser GLPI et l'Active Directory, ce tutoriel nous explique comment faire : https://www.it-connect.fr/tuto-glpi-configurer-authentification-active-directory/. On crée ensuite les règles LDAP.
+      <br><br>
+      
     </p>
     <div class = "title2" id = "P9">Plan de sauvegarde </div>
     <p>
