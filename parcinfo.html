@@ -43,7 +43,7 @@
         <div class = "textPresentation">
           L'ETP de Chasseneuil doit pouvoir assurer une gestion de l'inventaire et un suivi des incidents. Il faut proposer une solution à ce besoin, et sécuriser cette solution, notamment en élaborant des plans de sauvegarde et une sécurisation des échanges.
           <br><br>
-          Afin d'optimiser le travail, il a été jugé préférable de présenter toutes les missions dans un premier temps, puis réorganiser l'ensemble de ces missions afin d'aboutir à un plan d'approche de la solution. En effet, nous avons souhaité partir d'abord des missions de réseau physique, pour ensuite s'occuper des applications. Pour faire le parallèle avec le modèle OSI, on peut dire qu'on remonte de la couche 7 vers la couche 1.
+          Afin d'optimiser le travail, il a été jugé préférable de présenter toutes les missions dans un premier temps, puis réorganiser l'ensemble de ces missions afin d'aboutir à un plan d'approche de la solution. En effet, nous avons souhaité partir d'abord des missions de réseau physique, pour ensuite s'occuper des applications.
         </div>
         <div class = "downloadPresentation">
           <div class = "download">
@@ -64,13 +64,7 @@
           </div>
           <div class = "download">
             <div>
-              <a href =  "./files/ParcInfo-CR.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement du compte-rendu de l'atelier InfraSite" title = "Téléchargez le PDF du compte-rendu de l'atelier ParcInfo"></a>
-            </div>
-            <div>Compte-rendu de l'atelier ParcInfo</div>
-          </div>
-          <div class = "download">
-            <div>
-              <a href =  "./files/InfraSite-DT.zip" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier InfraSite" title = "Téléchargez le PDF du compte-rendu de l'atelier InfraSite"></a>
+              <a href =  "./files/ParcInfo-DT.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier ParcInfo" title = "Téléchargez le PDF du compte-rendu de l'atelier InfraSite"></a>
             </div>
             <div>Documentation technique de l'atelier ParcInfo</div>
           </div>
@@ -141,7 +135,6 @@
       <div class = "partie">
         <a href="#cdc" class = "titrePartie">Énoncé du cahier des charges</a><br>
         <ul>
-          <li><a href="#M0" class = "elementPartie">Mission 0</a></li>
           <li><a href="#M1" class = "elementPartie">Mission 1</a></li>
           <li><a href="#M2" class = "elementPartie">Mission 2</a></li>
           <li><a href="#M3" class = "elementPartie">Mission 3</a></li>
@@ -175,23 +168,6 @@
   </section>
   <section class = "fullScreenSection"  id = "M0">
     <div class = "title1">Énoncé du cahier des charges</div>
-    <div class = "title2" id = "M0">Mission 0 : prise en main du cahier des charges</div>
-    <p>
-      Pour permettre une gestion fiable du parc informatique de TiersLieux et un recensement des matériels, le service informatique souhaite installer et déployer un outil de gestion de parc et de gestion d’incident. Vous avez été chargé de mettre en place une solution de gestion de parc et d’incidents. L’installation devra être faite avec la dernière version des logiciels.
-    </p>
-    <div class = "title3">Opérations à réaliser</div>
-    <ul>
-      <li>Installer, configurer et tester les outils nécessaires à l’inventaire régulier et à la gestion des incidents sur le parc informatique de TiersLieux. La solution choisie est basée sur l’application GLPI et son gestionnaire d’inventaire intégré.</li>
-      <li>Réalisation d’une maquette composée de machines clientes, virtuelles ou pas, qui mettra en évidence les fonctionnalités demandées dans le cahier des charges fourni.</li>
-    </ul>
-    <div class = "title3">Productions attendues</div>
-    <ul>
-      <li>Produire la liste des tâches à réaliser, le schéma du réseau et son plan d'adressage ;</li>
-      <li>Produire la procédure d’installation détaillée indiquant d’éventuels problèmes ou contraintes rencontrées</li>
-      <li>Montrer et documenter la mise à jour de l’inventaire lors de l’arrivée d’une nouvelle machine ;</li>
-      <li>Montrer les étapes de la gestion d’un ticket d’incident ;</li>
-      <li>Montrer la réalité de la haute-disponibilité du service GLPI.</li>
-    </ul>
     <div class = "title2" id = "M1">Mission 1 : le réseau inventorié</div>
     <ul>
       <li>La solution doit être représentative des systèmes présents dans le parc informatique de TiersLieux et AuditME.</li>
@@ -234,126 +210,50 @@
     <p>
       Pour l'instant, on ne s'occupe que d'un serveur, SRVHDESK. Le plan d'adressage initial souhaite qu'on lui attribue l'adresse 10.2.0.2, mais comme HaProxy va intervenir et qu'on lui donnera cette adresse pour que les échanges vers les serveurs se fassent avec, nous allons changer.
       <br><br>
-      On prendra l'adresse 10.2.0.3 pour SRVHDESK. On lui implante une architecture LAMP, avec MariaDB comme gestionnaire de base de données. On installe GLPI.
-      <br><br>
-      Attardons-nous sur MariaDB : on aura lancé une installation sécurisée de MariaDB. Puis, on crée un utilisateur de MariaDB, "glpi". Dans MariaDB, nous attribuons tous les droits sur la base de données de GLPI pour l'utilisateur "glpi". Ce dernier pourra se connecter à partir de n'importe quel poste du réseau. Exportons la base de données de MariaDB et transférons-la sur SRVBDDGLPI.
-      <br><br>
-      Le serveur SRVBDDGLPI aura l'adresse 10.2.0.5 (10.2.0.4 sera donné à SRVHDESK2, clone de SRVHDESK). Sur SRVBDDGLPI, en ligne de commande, on lance l'installation sécurisée de MariaDB. Puis, on importe la base de données de GLPI en attribuant tous les droits dessus à l'utilisateur GLPI. On n'oublie pas, sur ce serveur, d'accorder l'accès distant au service. Sur le serveur SRVHDESK, on modifie le fichier /etc/glpi/config_db.php en remplaçant l'utilisateur habilité par "glpi" et autres informations comme l'IP du serveur et le nom de la base.
+      On prendra l'adresse 10.2.0.3 pour SRVHDESK. On lui implante une architecture LAMP, avec MariaDB comme gestionnaire de base de données. On installe GLPI. Exportons la base de données GLPI de MariaDB et transférons-la sur SRVBDDGLPI. Le serveur SRVBDDGLPI aura l'adresse 10.2.0.5 (10.2.0.4 sera donné à SRVHDESK2, clone de SRVHDESK). On y installe MariaDB.
       <br><br>
       Lorsque tout est téléchargé et installé, on change de mode de réseau et on branche nos serveurs SRVHDESK et SRVBDDGLPI dans le réseau des serveurs. Avant de faire pareil pour SRVHAPROXY, on récupère bien sûr les paquets de HaProxy pour l'installer. Ensuite, on supprime la base de données locale de GLPI sur SRVHDESK, on partage des fichiers de configuration sur le réseau, puis on clone SRVHDESK, ce qui donne SRVHDESK2 et on modifie en conséquence l'adresse IP, les fichiers /etc/hosts et /etc/hostname. D'ailleurs, dans /etc/hosts, on peut renseigner les machines que nous sommes amenées à ping régulièrement.
       <br><br>
       On peut passer à la configuration HaProxy, sur le serveur SRVHAPROXY.
     </p>
-    <div class = "title2" id = "P4">HaProxy et sécurisation des échanges</div>
+    <div class = "title2" id = "P4">HaProxy et sécurisation des échanges (mission 5)</div>
     <p>
        Tout se passe dans le fichier /etc/haproxy/haproxy.cfg, mais avant de faire quoi que ce soit, installons le SSL. Le fait que les échanges soient en SSL ou non influe sur quelques lignes du fichier de configuration. On utilisera un certificat autosigné.
        <br><br>
-       Plusieurs choix s'offrent à nous pour installer les certificats SSL, et nous nous tournons vers Active Directory Certificates Services. On installe la fonctionnalité, et en parallèle, on crée une demande de certificats sur notre SRVHAPROXY et on crée une clé privée. Le déroulé de l'opération est décrit dans la fiche technique, mais en ce qui concerne l'échange des fichiers entre les machines, en situation réelle, nous aurions pu prendre une clé USB, par exemple. Ici, nous avons utilisé SSH et le service Python qui permet de monter un mini-serveur, le temps du téléchargenement (python3 -m http.server [N° de port]).
-       <br><br>
-       Le contenu du fichier /etc/haproxy/haproxy.cfg est le suivant :
-      <br><br>
-      <div class = "italic">
-        <br>
-        global<br>
-          log /dev/log  local0<br>
-          log /dev/log  local1 notice<br>
-          chroot /var/lib/haproxy<br>
-          stats socket /run/haproxy/admin.sock mode 660 level admin<br>
-          stats timeout 30s<br>
-          user haproxy<br>
-          group haproxy<br>
-          daemon<br>
-<br>
-          # Default SSL material locations<br>
-          ca-base /etc/ssl/certs<br>
-          crt-base /etc/ssl/private<br>
-<br>
-          # See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.0.3&config=intermediate
-                ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
-                ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
-                ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets<br>
-<br>
-        defaults<br>
-          log global<br>
-          mode  http<br>
-          option  httplog<br>
-          option  dontlognull<br>
-                timeout connect 5000<br>
-                timeout client  50000<br>
-                timeout server  50000<br>
-          errorfile 400 /etc/haproxy/errors/400.http<br>
-          errorfile 403 /etc/haproxy/errors/403.http<br>
-          errorfile 408 /etc/haproxy/errors/408.http<br>
-          errorfile 500 /etc/haproxy/errors/500.http<br>
-          errorfile 502 /etc/haproxy/errors/502.http<br>
-          errorfile 503 /etc/haproxy/errors/503.http<br>
-          errorfile 504 /etc/haproxy/errors/504.http<br>
-<br>
-        # frontend glpi<br>
-        frontend glpi<br>
-          bind 10.2.0.2:80<br>
-          bind 10.2.0.2:443 ssl crt /etc/ssl/private/haproxy.pem<br>
-          http-request redirect scheme https unless { ssl_fc }<br>
-          default_backend glpi_back<br>
-<br>
-        # backend glpi<br>
-        backend glpi_back<br>
-          balance roundrobin<br>
-          stick-table type ip size 200k expire 30m<br>
-          stick on src<br>
-          server srvhdesk 10.2.0.3:80 check<br>
-          server srvhdesk2 10.2.0.4:80 check<br>
-<br>
-        listen stats<br>
-          bind 10.2.0.2:18152<br>
-          stats enable<br>
-          stats uri /statistics<br>
-          stats refresh 10s<br>
-          stats auth admin:Sio1234*<br>
-      </div>
+       Plusieurs choix s'offrent à nous pour installer les certificats SSL, et nous nous tournons vers Active Directory Certificates Services. On installe la fonctionnalité, et en parallèle, on crée une demande de certificats sur notre SRVHAPROXY et on crée une clé privée. Le déroulé de l'opération est décrit dans la fiche technique, mais en ce qui concerne l'échange des fichiers entre les machines, en situation réelle, nous aurions pu prendre une clé USB, par exemple. Ici, nous avons utilisé SSH et le service Python qui permet de monter un mini-serveur, le temps du téléchargenement (python3 -m http.server [N° de port]). La configuration de HaProxy a été copiée dans la fiche technique n°2.
     </p>
-    <div class = "title2" id = "P7">Déploiement de l'agent GLPI</div>
+    <div class = "title2" id = "P7">Déploiement de l'agent GLPI (mission 3)</div>
     <p>
       Pour déployer l'agent GLPI, nous allons faire comme on nous l'a suggéré, c'est-à-dire à travers une GPO. On utilisera la même méthode qu'Adobe Acrobat, c'est-à-dire qu'on prendra un fichier .msi, qu'on le partagera et qu'on l'installera avec la fonctionnalité "Installation de logiciels".
     </p>
-    <div class = "title2" id = "P8">Configuration de GLPI</div>
+    <div class = "title2" id = "P8">Configuration de GLPI (mission 2)</div>
     <p>
-      Il faut paramétrer GLPI de manière à ce que les permissions de chaque utilisateur permettent la bonne prise en charge des incidents techniques. Cela consiste à créer des groupes et des profils appropriés, puis à synchroniser l'Active Directory avec GLPI, ce qui permet d'établir des règles LDAP sur GLPI et d'automatiser l'affectation à un groupe et profil.
-      <br><br>
-      En ce qui concerne les groupes, on scinde les membres de l'ETP en deux : les utilisateurs (employés de l'ETP ne faisant pas partie du service informatique et adhérents) et le support informatique (techniciens, stagiaires... : informaticien). Pour les profils, on en crée quatre : Adhérent, Employé, N1 et N2. Adhérent est le clone de Self-Service. Il est destiné aux adhérents de l'ETP et permet de créer des tickets. Employé est aussi un clone de Self-Service, mais dans les faits, il serait idéal de pouvoir fusionner la capacité de création de ticket de Self-Service avec les privilèges de lecture du profil Observer. N1 est créé pour les techniciens de niveau 1, dont font partie les stagiaires. Il s'agit d'une copie du profil technicien. N2 est pour les personnes se chargeant des problèmes de niveau 2 : c'est une réplique du profil Supervisor.
-      <br><br>
-      Dans l'Active Directory, on crée des groupes globaux afin que plus tard, les règles LDAP de GLPI affectent à ces groupes globaux un profil et groupe approprié. On crée un groupe global par groupe existant dans GLPI, donc un pour les utilisateurs, et un pour le support informatique. On crée ensuite un groupe global par profil existant. Pour synchroniser GLPI et l'Active Directory, ce tutoriel nous explique comment faire : https://www.it-connect.fr/tuto-glpi-configurer-authentification-active-directory/. On crée ensuite les règles LDAP.
-      <br><br>
-      
+      On crée les groupes Utilisateur et Support, ainsi que les profils Adhérent, Employé, N1 et N2. La justification et le détail de ces éléments est disponible dans la fiche technique n°2 de cet atelier. On lie l'Active Directory à GLPI, surtout afin d'automatiser l'affectation de groupe et de profil de chaque utilisateur, dépendant de l'appartenance de ce dernier à un groupe global spécifique créé au préalable.
     </p>
-    <div class = "title2" id = "P9">Plan de sauvegarde </div>
+    <div class = "title2" id = "P9">Plan de sauvegarde (mission 4)</div>
     <p>
       En dernier lieu, établissons un plan de sauvegarde. Déterminons les données à sauvegarder. Nous avons déjà le système en lui-même. En conditions réelles, dépendant de si nous sommes sur une machine réelle ou virtuelle, on peut faire un point de restauration/un snapshot des systèmes lorsque ces derniers viennent d'être installés, sans aucune donnée dessus à part celles qui permettent de démarrer et les logins de base. Ensuite, nous avons la base de données de GLPI.
       <br><br>
       Le chef du service informatique opte pour une sauvegarde complète quotidienne. Cela est lourd en termes de temps et de capacités de stockage. Les données de GLPI sont soumises à de nombreux changements, dûs à la création de tickets ou à l'activité même de l'entreprise, puisqu'elle accueille des utilisateurs qui viennent et partent. Il faudrait donc une sauvegarde qui puisse être fréquente, sans trop ralentir le système d'information. Donc une sauvegarde incrémentielle semble le meilleur choix. Nous pourrions ensuite faire une sauvegarde complète le mardi soir, afin qu'en cas de problème, le service informatique puisse réagir le reste de la semaine (du mercredi au vendredi).
       <br><br>
-      De nombreux logiciels permettent de réaliser des sauvegardes, comme VeamBackup ou Rsync pour Linux.
+      On se basera sur UrBackup pour réaliser les sauvegardes. On installe le serveur sur SRVINTRA, et le client sur SRVBDDGLPI et les serveurs GLPI.
     </p>
   </section>
   <section>
     <div class = "title1" id = "bilan">Résultats & bilan</div>
-    <div class = "title2" id = "resultats">Résultats</div>
-    <p>
-      Problèmes de certificats SSL.
-      <br><br>
-      Contenu en attente
-    </p>
     <div class = "title2" id = "etatdeslieux">État des lieux</div>
     <p>
-      Contenu en attente
+      Au niveau de l'architecture, nous avons deux serveurs GLPI en load-balancing grâce à HaProxy. Ces deux serveurs pointent vers un quatrième serveur qui contient la base de données de GLPI. Le serveur Windows nous permet d'accéder à l'interface graphique. Une GPO a été déployée pour que l'agent MSI soit installé sur tous les postes des bureaux. À l'heure actuelle (22 avril 2026), UrBackup n'a pas encore été installé.
     </p>
     <div class = "title2" id = "problemes">Problèmes rencontrés</div>
     <p>
-      Contenu en attente
+      Les certificats SSL ont posé problème : au départ, on souhaitait utiliser Active Directory Certificates Services, mais des erreurs récurrentes au moment de passer des commandes certutil apparaissaient, évoquant un service et une fonctionnalité absentes. Il a donc fallu se tourner vers des certificats auto-signés.
+      <br><br>
+      Pour la sauvegarde, la solution de cette dernière n'ait pas encore été installée car un temps considérable a été consacré à restic et cron avant de se tourner vers cette option plus abordable.
     </p>
     <div class = "title2" id = "ameliorations">Suggestions d'amélioration</div>
     <p>
-      Contenu en attente
+      On est limités par les capacités de l'ordinateur, mais en conditions réelles, on pourrait créer un serveur dédié aux sauvegardes. De plus, même s'il ne s'agit pas de sauvegarde, nous pourrions fragmenter les disques selon un schéma RAID sous Linux pour se parer face à une perte de données.
     </p>
   </section>
   <div class = "afterGlobal"></div>
