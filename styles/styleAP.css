@@ -90,10 +90,9 @@ ul {
 .title1{
 	position:relative;
 	font-family:"InterTTL";
-	font-size:clamp(5rem,6vw,6.5rem);
-	padding-right:2rem;
+	font-size:clamp(2.5rem, 8vw, 5rem);
+	padding:5vh 0 8vh 0;
 	line-height:130%;
-	padding:10vh 0 15vh 0;
 }
 
 .alignRight{
@@ -144,6 +143,10 @@ ul {
 	font-style:italic;
 }
 
+.bold{
+	font-weight:900;
+}
+
 /*___________________________________________________________________________ Menu*/
 .fullScreenMenu{
 	position:fixed;
@@ -180,12 +183,12 @@ ul {
 }
 
 .primary{
-	font-size:clamp(2.5rem,3vw,3.3rem);
+	font-size: clamp(1.5rem, 5vw, 3rem);
 	padding-top:1rem;
 }
 
 .secondary{
-	font-size:clamp(1.8rem,2.2vw,2.7rem);
+	font-size: clamp(1.2rem, 4vw, 2rem);
 	line-height:120%;
 	padding-left:2rem;
 }
@@ -195,18 +198,33 @@ ul {
 }
 
 .toggle{
-	position:fixed;
-	z-index:99;
-	top:2rem;
-	left:2rem;
+	position:fixed; 
+	top:1rem;
+	left:1rem;
+	padding:0.5rem;
+	background:rgba(255,255,255,0.7);
+	border-radius:8px;
+	backdrop-filter:blur(5px);
+	z-index:10;
 }
 
 .backUp a img{
-	position:fixed;
+	position:fixed; 
 	z-index:98;
 	bottom:2rem;
-	right:2rem;
+	right:2vw; 
 }
+
+.menuIcon img {
+  width: clamp(20px, 6vw, 55px);
+  height: auto;
+}
+
+.backUp img {
+  width: clamp(20px, 6vw, 60px);
+  height: auto;
+}
+
 /*___________________________________________________________________________ Hero*/
 .hero{
 	position:relative;
@@ -273,11 +291,10 @@ ul {
 
 /*___________________________________________________________________________ Sommaire*/
 .ensemblePartie{
-	padding-top:1.5rem;
-	padding-bottom:20vh;
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:space-around;
+	gap:2rem;
+	justify-content:center;
 }
 
 .ensemblePartie a {
@@ -291,8 +308,10 @@ ul {
 
 .partie{
 	display:block;
-	width:20rem;
-	height:15rem;
+	width:100%;
+	max-width:20rem;
+	height:auto;
+	margin-bottom:2rem;
 }
 
 .partie ul {
@@ -309,4 +328,24 @@ ul {
 /*___________________________________________________________________________ Fin*/
 .afterGlobal{
 	height:20vh;
+}
+
+@media screen and (max-width: 768px){
+
+	.presentation{
+		flex-direction:column;
+	}
+
+	.textPresentation,
+	.downloadPresentation{
+		width:100%;
+		padding-left:0;
+	}
+
+}
+
+@media screen and (min-width: 1024px){
+	section{
+		width:75%;
+	}
 }
