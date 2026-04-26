@@ -183,17 +183,19 @@ section {
 	width:100%;
 }
 
-.row{
-	display:flex;
-	padding-bottom:2rem;
+.row {
+  display: flex;
+  gap: 2rem;
+  padding-bottom:2rem;
+  text-align:right;
 }
 
-.column1{
-	width:40%;
+.column1 {
+  flex: 1;
 }
 
-.column2{
-	width:60%;
+.column2 {
+  flex: 2;
 }
 
 .download{
@@ -220,7 +222,35 @@ section {
 		width:100%;
 		padding-left:0;
 	}
+  .row {
+    flex-direction: column;
+  }
 
+  .column1,
+  .column2 {
+    width: 100%;
+  }
+
+  .column1 {
+    margin-bottom: 1rem;
+  }
+
+  .download {
+    flex-direction: row;
+    font-size: 1.2rem;
+  }
+
+  .title1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .title2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .title3 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
 }
 
 @media screen and (min-width: 1024px){
