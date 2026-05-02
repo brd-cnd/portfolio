@@ -49,9 +49,13 @@
   <p class = "justifyText">
     Bien des personnes du milieu de la cybersécurité nous diront que la plus grande faille, c'est l'humain. Ayant à coeur de sensibiliser plus tard les personnes aux risques de sécurité informatique, le sujet ci-dessus fait donc sens pour moi, et par ailleurs, l'intelligence artificielle amène son lot d'enjeux dans cette question. Comme mentionné ci-dessus, j'ai mal interprété les consignes et pensais que la veille technologique était généraliste, et non axée sur une question, ce pourquoi cette partie n'est pas encore complétée. Mais il est tout à fait possible d'exposer la mise en place de cette veille.
     <br><br>
-    Afin de connaître les avancées réalisées ces derniers mois, nous pouvons utiliser un agent IA. On utilisera pour cela Docker, n8n et un LLM local grâce à Ollama. L'utilité de l'agent IA est de rattraper le temps perdu. Il faudra faire attention à ne pas être biaisé dans les prompts et dans l'agencement des tâches et des outils qui sont mis à disposition de l'agent IA. En particulier, il faut se demander à quels biais peut être soumis l'agent IA : si sa mémoire est réutilisée, ne risque-t-il pas de tomber dans un biais de confirmation ? Comment vérifier que l'information n'est pas fausse ? On pourrait, sur ce dernier point, demander à chercher des éléments contradictoires et vérifier soi-même si ces derniers sont fiables. On pourrait éliminer d'office des médias jugés peu sérieux. Un point d'honneur doit être mis sur les métadonnées : date, source, auteur, afin de voir si l'information est fiable. En parallèle, si une question spécifique est posée, on varie le "type" de média numérique : à la fois des articles de recherche (HAL, OpenSource, CiteSeerX,...) pour approfondir le sujet, des sources grand public d'intérêt vulgarisateur, et certains forums pour connaître l'intérêt du grand public ou l'avis divergent de certains invidus qui peut ouvrir des portes à d'autres pistes.
+    Je souhaitais d'une part recueillir des articles sérieux pour comprendre les notions du sujet. Je me suis donc emparée de publications de recherches sur diverses bibliothèques (Google Scholar, CiteSeer^x, ArXiv, HAL, Cairn.info...). Puis, partie de ces publications, j'ai ensuite cherché la réception du grand public (forum, médias,...) afin de connaître l'opinion publique. Il s'agit donc d'une méthode pull, et j'ai utilisé l'intelligence artificielle pour m'aider à trouver des papiers de recherche. Le prompt en question (il paraît qu'en disant bonjour, l'IA est plus conciliante, mais je commence à douter de cela) ressemblait à quelque chose comme ceci : "Bonjour. Faites-moi une liste de cinq articles portant sur l'évolution du social engineering liée à l'intelligence artificielle, s'il vous plaît. Les ressources en question peuvent être en français ou en anglais, et doivent provenir de sources fiables telles que des publications de recherche."
     <br><br>
-    L'agent IA pourrait être utilisé tant pour une méthode pull que pour une méthode push en lui donnant accès à une boîte mail abonnée à des flux RSS. Concernant ces derniers, on peut aussi utiliser des agrégateurs de flux tels que Miniflux. Google dorks est également un bon outil. Enfin, les chaînes Youtube peuvent s'avérer utiles. Au cours de l'an dernier, j'ai bénéficié d'un abonnement à la revue MISC, et un numéro en particulier se penchait sur l'ingénierie sociale.
+    Au départ, je souhaitais automatiser ma veille au maximum, en déployant un agent IA local via n8n, Ollama et Docker, mais mon ordinateur commençait à manquer de place et je ne voulais pas risquer de déplacer les machines virtuelles de mes ateliers professionnels.
+    <br><br>
+    J'ai aussi laissé l'information venir à moi (méthode push) en m'abonnant pour l'année 2024-2025 à la revue MISC, ainsi qu'à des flux RSS. Sur LinkedIn, je me suis abonnée au Clusif, qui publie des lettres de veille.
+    <br><br>
+    Le point de départ de cette veille technologique a été un article publié dans HAL (Florence Sèdes. Sécurité dans les SI & social engineering - un état des lieux. INFORSID 2024, May 2024, Nancy,France. ⟨hal-04613192⟩). Dans ce papier, l'auteur fait un tour d'horizon de ce qui se fait actuellement le plus en termes d'attaques. Elle dresse aussi les étapes d'une attaque (formulation de l'attaque, récolte des informations,...). Cela m'a permis de décomposer mon travail et de me demander, pour chacune de ces étapes, quelles sont les nouveaux apports de l'IA. Il y a aussi des sources parlant de moyens offensifs, tels que la notion de cybersécurité cognitive développée dans une autre publication (Lumbamba, C. (2026). Vers une Cybersécurité Cognitive : Intégration de l’Intelligence Artificielle dans la Protection des Systèmes d'Information. Revue-IRS, 4(2). https://doi.org/10.5281/zenodo.19150955).
   </p>
 </section>
 <section>
@@ -140,14 +144,14 @@
         </div>
         <div class = "channel">
           <div class = "pdpYouTuber">
-            <img src="./styles/pictures/ytb/formip.jpg" alt="Photo de Damien Soulages">
+            <img src="./styles/pictures/ytb/parlonsCyber.jpg" alt="Photo de Parlons Cyber">
           </div>
           <div class = "textYouTube">
             <div class = "youTuber">
-              Formip
+              Parlons Cyber
             </div>
             <div class = "linkYouTuber">
-              <a href="https://www.youtube.com/@Formip" rel="noopener" target="_blank">@Formip</a>
+              <a href="www.youtube.com/@ParlonsCyber" rel="noopener" target="_blank">@ParlonsCyber</a>
             </div>
           </div>
         </div>
@@ -246,14 +250,14 @@
         </div>
         <div class = "channel">
           <div class = "pdpYouTuber">
-            <img src="./styles/pictures/ytb/formip.jpg" alt="Photo de Damien Soulages">
+            <img src="./styles/pictures/ytb/parlonsCyber.jpg" alt="Photo de Parlons Cyber">
           </div>
           <div class = "textYouTube">
             <div class = "youTuber">
-              Formip
+              Parlons Cyber
             </div>
             <div class = "linkYouTuber">
-              <a href="https://www.youtube.com/@Formip" rel="noopener" target="_blank">@Formip</a>
+              <a href="www.youtube.com/@ParlonsCyber" rel="noopener" target="_blank">@ParlonsCyber</a>
             </div>
           </div>
         </div>
