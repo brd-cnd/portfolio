@@ -49,7 +49,7 @@
   <p class = "justifyText">
     Bien des personnes du milieu de la cybersécurité nous diront que la plus grande faille, c'est l'humain. Ayant à coeur de sensibiliser plus tard les personnes aux risques de sécurité informatique, le sujet ci-dessus fait donc sens pour moi, et par ailleurs, l'intelligence artificielle amène son lot d'enjeux dans cette question. Comme mentionné ci-dessus, j'ai mal interprété les consignes et pensais que la veille technologique était généraliste, et non axée sur une question, ce pourquoi cette partie n'est pas encore complétée. Mais il est tout à fait possible d'exposer la mise en place de cette veille.
     <br><br>
-    Je souhaitais d'une part recueillir des articles sérieux pour comprendre les notions du sujet. Je me suis donc emparée de publications de recherches sur diverses bibliothèques (Google Scholar, CiteSeer^x, ArXiv, HAL, Cairn.info...). Puis, partie de ces publications, j'ai ensuite cherché la réception du grand public (forum, médias,...) afin de connaître l'opinion publique. Il s'agit donc d'une méthode pull, et j'ai utilisé l'intelligence artificielle pour m'aider à trouver des papiers de recherche. Le prompt en question (il paraît qu'en disant bonjour, l'IA est plus conciliante, mais je commence à douter de cela) ressemblait à quelque chose comme ceci : "Bonjour. Faites-moi une liste de cinq articles portant sur l'évolution du social engineering liée à l'intelligence artificielle, s'il vous plaît. Les ressources en question peuvent être en français ou en anglais, et doivent provenir de sources fiables telles que des publications de recherche."
+    Je souhaitais d'une part recueillir des articles sérieux pour comprendre les notions du sujet. Je me suis donc emparée de publications de recherches sur diverses bibliothèques (Google Scholar, CiteSeer^x, ArXiv, HAL, Cairn.info...). Puis, partie de ces publications, j'ai ensuite cherché dans les médias mainstream (forum, médias,...) afin de connaître l'opinion publique. Il s'agit donc d'une méthode pull, et j'ai utilisé l'intelligence artificielle pour m'aider à trouver des papiers de recherche. Le prompt en question (il paraît qu'en disant bonjour, l'IA est plus conciliante, mais je commence à douter de cela) ressemblait à quelque chose comme ceci : "Bonjour. Faites-moi une liste de cinq articles portant sur l'évolution du social engineering liée à l'intelligence artificielle, s'il vous plaît. Les ressources en question peuvent être en français ou en anglais, et doivent provenir de sources fiables telles que des publications de recherche."
     <br><br>
     Au départ, je souhaitais automatiser ma veille au maximum, en déployant un agent IA local via n8n, Ollama et Docker, mais mon ordinateur commençait à manquer de place et je ne voulais pas risquer de déplacer les machines virtuelles de mes ateliers professionnels.
     <br><br>
@@ -279,226 +279,787 @@
   </div>
   <div class = "title2">Articles enregistrés</div>
   <div class ="container">
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Sécurité des SI & social engineering - un état des lieux
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Sécurité des SI & social engineering - un état des lieux
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">Archives HAL</div>
+              <div class = "dateArticle">Mai 2024</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          AI-Powered Social Engineering: Emerging Attack Vectors, Vulnerabilites, and Multi-Layered Defense Strategies
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            AI-Powered Social Engineering: Emerging Attack Vectors, Vulnerabilites, and Multi-Layered Defense Strategies
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.mdpi.com/2073-431X/15/2/128">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">MDPI</div>
+              <div class = "dateArticle">17 février 2026</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Vers une cybersécurité cognitive
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Vers une cybersécurité cognitive
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://zenodo.org/records/19150955">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">Zenodo</div>
+              <div class = "dateArticle">Septembre 2021</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Digital deception: generative artificial intelligence in social engineering and phishing
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Digital deception: generative artificial intelligence in social engineering and phishing
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://zenodo.org/records/19150955">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">Springer Nature Links</div>
+              <div class = "dateArticle">12 octobre 2024</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Deepfake-Driven Social Engineering:Threats, Detection Techniques and Defensive Strategies in Corporate Environments
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Deepfake-Driven Social Engineering:Threats, Detection Techniques and Defensive Strategies in Corporate Environments
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.mdpi.com/2624-800X/5/2/18">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">MDPI</div>
+              <div class = "dateArticle">27 avril 2025</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Detecting Deepfake-Enabled Social Engineering Attacks Using Mutlimodal AI
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Detecting Deepfake-Enabled Social Engineering Attacks Using Mutlimodal AI
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.ijert.org/detecting-deepfake-enabled-social-engineering-attacks-using-multimodal-ai-techniques-ijertconv14is020069">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">IJERT</div>
+              <div class = "dateArticle">21 avril 2026</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          A comparative study of deepfake facial manipulation technique using generative adversarial networks
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            A comparative study of deepfake facial manipulation technique using generative adversarial networks
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://link.springer.com/article/10.1007/s44163-025-00337-2">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">Springer Nature Links</div>
+              <div class = "dateArticle">17 juin 2025</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          Multi-domain awareness for compressed deepfake videos detection over social networks guided by common mechanisms between artifacts
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            Multi-domain awareness for compressed deepfake videos detection over social networks guided by common mechanisms between artifacts
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.sciencedirect.com/science/article/abs/pii/S107731422400153X">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">ScienceDirect</div>
+              <div class = "dateArticle">24 octobre 2024</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          PGD-Trap:proactove Deepfake Defense with Sticky Adversarial Signals and Iterative Latent Variable Refinement
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            PGD-Trap:proactove Deepfake Defense with Sticky Adversarial Signals and Iterative Latent Variable Refinement
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.mdpi.com/2079-9292/13/17/3353">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">MDPI</div>
+              <div class = "dateArticle">19 août 2024</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
     <div class = "article">
-      <!--********************************************************************************-->
       <div class = "item">
+        <div class = "bubble">
+          A robust dual-pronged proactive defense framework against deepfakes via adversarial semi-fragile watermarking
+        </div>
         <div class = "infoArticle">
           <div class ="titleArticle">
-            Titre de l'article
+            A robust dual-pronged proactive defense framework against deepfakes via adversarial semi-fragile watermarking
           </div>
           <div class = "btnVeille">
-            <button class = "linkArticle" onclick="copyLink()">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.sciencedirect.com/science/article/abs/pii/S0957417425043362">
               <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
             </button>
             <div class = "metaArticle">
-              <div class = "sourceArticle">Source de l'article</div>
-              <div class = "dateArticle">Date de l'article</div>
+              <div class = "sourceArticle">ScienceDirect</div>
+              <div class = "dateArticle">25 mars 2026</div>
             </div>
           </div>
         </div>
         <div class = "recapArticle">
-          Résumé de l'article
+          Description
         </div>
       </div>
     </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Deep Learning for Deepfakes Creation and Detection : A Survey
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Deep Learning for Deepfakes Creation and Detection : A Survey
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://arxiv.org/abs/1909.11573">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">ArXiv</div>
+              <div class = "dateArticle">11 août 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          A Review of Deep Learning-based Approaches for Deepfake Content Detection
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            A Review of Deep Learning-based Approaches for Deepfake Content Detection
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://arxiv.org/abs/2202.06095">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">ArXiv</div>
+              <div class = "dateArticle">15 février 2024</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Deep Insights of Deepface Technology : A Review
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Deep Insights of Deepface Technology : A Review
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://arxiv.org/abs/2105.00192">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">ArXiv</div>
+              <div class = "dateArticle">8 janvier 2023</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Claude Mythos : voici pourquoi cette IA d’Anthropic fait peur à tout le monde
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Claude Mythos : voici pourquoi cette IA d’Anthropic fait peur à tout le monde
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.journaldugeek.com/2026/04/27/claude-mythos-voici-pourquoi-cette-ia-danthropic-fait-peur-a-tout-le-monde/">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Journal du geek</div>
+              <div class = "dateArticle">27 avril 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Biais cognitif
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Biais cognitif
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://fr.wikipedia.org/wiki/Biais_cognitif">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Wikipédia</div>
+              <div class = "dateArticle">27 avril 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Don't go to the police
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Don't go to the police
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.orangecyberdefense.com/dontgotothepolice/fr">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Orange Cyberdéfense</div>
+              <div class = "dateArticle">12 mars 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Infobulle
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Titre
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://hal.science/hal-04613192v1">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">Source</div>
+              <div class = "dateArticle">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
+    <div class = "article">
+      <div class = "item">
+        <div class = "bubble">
+          Approche cognitive des cyberattaques par ingénierie sociale
+        </div>
+        <div class = "infoArticle">
+          <div class ="titleArticle">
+            Approche cognitive des cyberattaques par ingénierie sociale
+          </div>
+          <div class = "btnVeille">
+            <button type="button" onclick="copyLink(this)" data-link="https://www.europeanscientist.com/fr/opinion/approche-cognitive-des-cyberattaques-par-ingenierie-sociale/">
+              <img src="./styles/icons/copy.png" alt="Icône pour copier le lien" title="Copier le lien">
+              <div class = "copySuccess">Lien copié !</div>
+            </button>
+            <div class = "metaArticle">
+              <div class = "sourceArticle">European Scientist</div>
+              <div class = "dateArticle">Septembre 2021</div>
+            </div>
+          </div>
+        </div>
+        <div class = "recapArticle">
+          Description
+        </div>
+      </div>
+    </div>
+    <!--********************************************************************************-->
   </div>
 </section>
 <div class = "afterGlobal"></div>
@@ -511,5 +1072,18 @@
    menu.classList.contains("active") ? menu.classList.remove("active") : menu.classList.add("active");
  }
 </script>
+<script>
+function copyLink(button) {
+  const url = button.getAttribute("data-link");
+  const msg = button.querySelector(".copySuccess");
 
+  navigator.clipboard.writeText(url).then(() => {
+    msg.classList.add("show");
+
+    setTimeout(() => {
+      msg.classList.remove("show");
+    }, 1500);
+  });
+}
+</script>
 </html>
