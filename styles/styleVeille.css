@@ -349,6 +349,52 @@ section {
 	font-family:"InterTTL";
 	font-size:2rem;
 	padding:1rem 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+.bubble{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+	font-family:"InterTTL";
+	width:max-content;
+	width:18rem;
+	font-size:1.4rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.item .bubble {
+  position: absolute;
+  bottom: 105%; /* au-dessus de la carte */
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.item:hover .bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item .bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
 
 .dateArticle{
@@ -390,6 +436,25 @@ section {
 	padding:0.5rem;
 	background-color:none;
 	border-radius:50%;
+}
+
+.copySuccess{
+	position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.copySuccess.show {
+  opacity: 1;
 }
 
 .goToPage{
