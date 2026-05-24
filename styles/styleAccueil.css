@@ -167,12 +167,14 @@ section {
 /*___________________________________________________________________________ Hero*/
 .hero{
 	position:relative;
+	duisplay:block;
 	width:100vw;
 	height:100vh;
 }
 
 .heroBox{
 	position:relative;
+	display:block;
 	margin-right:auto;
 	margin-left:auto;
 	top:20vh;
@@ -326,7 +328,11 @@ section {
 	}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
+
+	.hero{
+		padding:10%;
+	}
 
   .heroBox{
     flex-direction: column;

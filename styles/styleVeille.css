@@ -410,6 +410,7 @@ section {
 .recapArticle{
 	position:absolute;
 	text-align:justify;
+	font-size:clamp(1vw,1em,1rem);
 	top:10%;
 	width:85%;
 	height:auto;
