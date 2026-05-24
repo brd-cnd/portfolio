@@ -138,8 +138,7 @@
           <li><a href="#M1" class = "elementPartie">Mission 1</a></li>
           <li><a href="#M2" class = "elementPartie">Mission 2</a></li>
           <li><a href="#M3" class = "elementPartie">Mission 3</a></li>
-          <li><a href="#M4" class = "elementPartie">Mission 4</a></li>
-          <li><a href="#M5" class = "elementPartie">Mission 5</a></li>
+          <li><a href="#M5" class = "elementPartie">Mission 4</a></li>
         </ul>
       </div>
       <div class = "partie">
@@ -152,8 +151,10 @@
           <li><a href="#P5" class = "elementPartie">Configuration NAT</a></li>
           <li><a href="#P7" class = "elementPartie">Déploiement de l'agent GLPI</a></li>
           <li><a href="#P8" class = "elementPartie">Configuration de GLPI</a></li>
-          <li><a href="#P9" class = "elementPartie">Plan de sauvegarde</a></li>
         </li>
+      </div>
+      <div class = "partie">
+        <a href="#deroule" class = "titrePartie">Déroulé du projet</a>
       </div>
       <div class = "partie">
         <a href="#bilan" class = "titrePartie">Résultats & bilan</a><br>
@@ -185,14 +186,7 @@
     <p>
       Tous les systèmes présents dans TiersLieux possèdent l’agent GLPI. Pour faciliter la gestion, il est conseillé de le réaliser à l’aide d’une GPO pour les machines Windows.
     </p>
-    <div class = "title2" id = "M4">Mission 4 : sécurité et sauvegarde des données</div>
-    <p>
-      Pour des raisons de sécurité, l‘application devra garantir la confidentialité des échanges entre GLPI et les utilisateurs.
-      <br><br>
-      Une solution de sauvegarde fiable et automatisée de toutes les données qui concernent la gestion du parc (données GLPI et inventaire) est à prévoir pour garantir la continuité de service de TiersLieux. Cette sauvegarde s’effectuera par le mécanisme et les outils de votre choix. Le chef du service informatique préconise une sauvegarde complète et journalière, mais vous laisse libre de proposer une autre planification. Vous présenterez votre solution ainsi que vos tests de sauvegarde et de restauration.
-    </p>
-
-    <div class = "title2" id = "M5">Mission 5 : haute-disponibilité</div>
+    <div class = "title2" id = "M5">Mission 4 : haute-disponibilité</div>
     <p>
       Afin d’assurer la continuité de service, vous mettrez en place un second serveur GLPI qui pourra prendre le relais en cas de panne du premier à l’aide de la solution HaProxy vue en B2.2 Séquence 7 – Étude et prototypage de la répartition de charge de serveurs web avec HaProxy. La base de données GLPI sera installée sur un 3e serveur sur lequel les deux serveurs GLPI pointeront et pour lequel on ne s’intéresse pas ici à la réplication de la base données.
     </p>
@@ -200,7 +194,7 @@
   <section>
     <div class = "title1" id = "plan">Réorganisation du cahier des charges</div>
     <p>
-      Si on traduit le cahier des charges, le but est d'installer un logiciel de gestion de parc : on se tourne vers GLPI. Il faut que les serveurs GLPI soient redondants grâce à HaProxy, et que leur base de donnée soit commune. Cette infrastructure ainsi que ses données doivent être sauvegardées de manière judicieuse. En ce qui concerne GLPI lui-même, nous devons 
+      Si on traduit le cahier des charges, le but est d'installer un logiciel de gestion de parc : on se tourne vers GLPI. Il faut que les serveurs GLPI soient redondants grâce à HaProxy, et que leur base de données soit commune. Cette infrastructure ainsi que ses données doivent être sauvegardées de manière judicieuse. En ce qui concerne GLPI lui-même, nous devons penser à sa structure organisationelle : créer les groupes et les entités de manière appropriée, et lier l'Active Directory à GLPI en prenant en compte le rôle des utilisateurs au sein de l'AD.
     </p>
     <div class = "title2" id = "P1">Installation des machines</div>
     <p>
@@ -216,7 +210,7 @@
       <br><br>
       On peut passer à la configuration HaProxy, sur le serveur SRVHAPROXY.
     </p>
-    <div class = "title2" id = "P4">HaProxy et sécurisation des échanges (mission 5)</div>
+    <div class = "title2" id = "P4">HaProxy et sécurisation des échanges (mission 4)</div>
     <p>
        Tout se passe dans le fichier /etc/haproxy/haproxy.cfg, mais avant de faire quoi que ce soit, installons le SSL. Le fait que les échanges soient en SSL ou non influe sur quelques lignes du fichier de configuration. On utilisera un certificat autosigné.
        <br><br>
@@ -230,30 +224,32 @@
     <p>
       On crée les groupes Utilisateur et Support, ainsi que les profils Adhérent, Employé, N1 et N2. La justification et le détail de ces éléments est disponible dans la fiche technique n°2 de cet atelier. On lie l'Active Directory à GLPI, surtout afin d'automatiser l'affectation de groupe et de profil de chaque utilisateur, dépendant de l'appartenance de ce dernier à un groupe global spécifique créé au préalable.
     </p>
-    <div class = "title2" id = "P9">Plan de sauvegarde (mission 4)</div>
+  </section>
+  <section>
+    <div class = "title1" id = "deroule">Déroulé du projet</div>
+    <div class = "download">
+      <div>
+        <a href =  "./files/ParcInfo-DT.pdf" download><img src = "./styles/icons/download.png" alt = "Bouton de téléchargement de l'ensemble de la documentation technique de l'atelier ParcInfo" title = "Téléchargez le PDF du compte-rendu de l'atelier InfraSite"></a>
+      </div>
+      <div>Documentation technique de l'atelier ParcInfo</div>
+    </div>
     <p>
-      En dernier lieu, établissons un plan de sauvegarde. Déterminons les données à sauvegarder. Nous avons déjà le système en lui-même. En conditions réelles, dépendant de si nous sommes sur une machine réelle ou virtuelle, on peut faire un point de restauration/un snapshot des systèmes lorsque ces derniers viennent d'être installés, sans aucune donnée dessus à part celles qui permettent de démarrer et les logins de base. Ensuite, nous avons la base de données de GLPI.
-      <br><br>
-      Le chef du service informatique opte pour une sauvegarde complète quotidienne. Cela est lourd en termes de temps et de capacités de stockage. Les données de GLPI sont soumises à de nombreux changements, dûs à la création de tickets ou à l'activité même de l'entreprise, puisqu'elle accueille des utilisateurs qui viennent et partent. Il faudrait donc une sauvegarde qui puisse être fréquente, sans trop ralentir le système d'information. Donc une sauvegarde incrémentielle semble le meilleur choix. Nous pourrions ensuite faire une sauvegarde complète le mardi soir, afin qu'en cas de problème, le service informatique puisse réagir le reste de la semaine (du mercredi au vendredi).
-      <br><br>
-      On se basera sur UrBackup pour réaliser les sauvegardes. On installe le serveur sur SRVINTRA, et le client sur SRVBDDGLPI et les serveurs GLPI.
+      La documentation technique téléchargeable ci-dessus étant relativement courte (par rapport aux autres ateliers professionnels), je vous propose ici de l'utiliser également en temps que compte-rendu. Effectivement, ce PDF présente les éléments de justification ayant mené à tel ou tel choix dans la réalisation de la solution, ainsi que les détails des lignes de commande ou opérations effectuées.
     </p>
   </section>
   <section>
-    <div class = "title1" id = "bilan">Résultats & bilan</div>
+    <div class = "title1" id = "bilan">Bilan</div>
     <div class = "title2" id = "etatdeslieux">État des lieux</div>
     <p>
-      Au niveau de l'architecture, nous avons deux serveurs GLPI en load-balancing grâce à HaProxy. Ces deux serveurs pointent vers un quatrième serveur qui contient la base de données de GLPI. Le serveur Windows nous permet d'accéder à l'interface graphique. Une GPO a été déployée pour que l'agent MSI soit installé sur tous les postes des bureaux. À l'heure actuelle (22 avril 2026), UrBackup n'a pas encore été installé.
+      Au niveau de l'architecture, nous avons deux serveurs GLPI en load-balancing grâce à HaProxy. Ces deux serveurs pointent vers un quatrième serveur qui contient la base de données de GLPI. Le serveur Windows nous permet d'accéder à l'interface graphique. Une GPO a été déployée pour que l'agent MSI soit installé sur tous les postes des bureaux.
     </p>
     <div class = "title2" id = "problemes">Problèmes rencontrés</div>
     <p>
       Les certificats SSL ont posé problème : au départ, on souhaitait utiliser Active Directory Certificates Services, mais des erreurs récurrentes au moment de passer des commandes certutil apparaissaient, évoquant un service et une fonctionnalité absentes. Il a donc fallu se tourner vers des certificats auto-signés.
-      <br><br>
-      Pour la sauvegarde, la solution de cette dernière n'ait pas encore été installée car un temps considérable a été consacré à restic et cron avant de se tourner vers cette option plus abordable.
     </p>
     <div class = "title2" id = "ameliorations">Suggestions d'amélioration</div>
     <p>
-      On est limités par les capacités de l'ordinateur, mais en conditions réelles, on pourrait créer un serveur dédié aux sauvegardes. De plus, même s'il ne s'agit pas de sauvegarde, nous pourrions fragmenter les disques selon un schéma RAID sous Linux pour se parer face à une perte de données.
+      On est limité par les capacités de l'ordinateur, mais en conditions réelles, on pourrait créer un serveur dédié aux sauvegardes. De plus, même s'il ne s'agit pas de sauvegarde, nous pourrions fragmenter les disques selon un schéma RAID sous Linux pour se parer face à une perte de données.
     </p>
   </section>
   <div class = "afterGlobal"></div>
